@@ -1,0 +1,52 @@
+PODS:
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - IQKeyboardManager (5.0.3)
+  - JCore (1.1.5)
+  - JPush (3.0.2):
+    - JCore (~> 1.1.1)
+  - Masonry (1.1.0)
+  - XHToast (1.4.0)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.6.3)
+  - FMDB (~> 2.6.2)
+  - IQKeyboardManager (~> 5.0.3)
+  - JPush (= 3.0.2)
+  - Masonry
+  - XHToast (~> 1.4.0)
+
+SPEC CHECKSUMS:
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  IQKeyboardManager: dc5b18b47e5170e4d150bb86dbee8c8a2fc48997
+  JCore: 9bd9c770c877c583d98b90a68792b8361974c231
+  JPush: 01a693fafe51b93eafc2e368bbc7a7cc07e12ce4
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  XHToast: 3b354766d56d9df8fef8e64387bbd25c90d71a86
+
+PODFILE CHECKSUM: 3cf7a33f581847f3de305fa83f2e96b80199791d
+
+COCOAPODS: 1.1.1

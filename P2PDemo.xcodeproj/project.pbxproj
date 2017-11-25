@@ -1,0 +1,887 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63283B4C1FC511BB0037AF2F /* ATCountdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 63283B451FC511BA0037AF2F /* ATCountdown.m */; };
+		63283B4D1FC511BB0037AF2F /* ATCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63283B461FC511BB0037AF2F /* ATCallView.m */; };
+		63283B4E1FC511BB0037AF2F /* ATLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63283B4A1FC511BB0037AF2F /* ATLabel.m */; };
+		63283B4F1FC511BB0037AF2F /* ATCallView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63283B4B1FC511BB0037AF2F /* ATCallView.xib */; };
+		63283B521FC511CA0037AF2F /* UIView+WZXLines.m in Sources */ = {isa = PBXBuildFile; fileRef = 63283B511FC511CA0037AF2F /* UIView+WZXLines.m */; };
+		634B3E8E1FAAF4680079716B /* ATCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 634B3E8C1FAAF4680079716B /* ATCommon.m */; };
+		634B3E921FAAFB940079716B /* ATMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 634B3E911FAAFB940079716B /* ATMainViewController.m */; };
+		635444901FAABFF00074DB64 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6354448F1FAABFF00074DB64 /* AppDelegate.m */; };
+		635444961FAABFF00074DB64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 635444941FAABFF00074DB64 /* Main.storyboard */; };
+		635444981FAABFF00074DB64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 635444971FAABFF00074DB64 /* Assets.xcassets */; };
+		6354449E1FAABFF00074DB64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6354449D1FAABFF00074DB64 /* main.m */; };
+		635444A81FAABFF00074DB64 /* P2PDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 635444A71FAABFF00074DB64 /* P2PDemoTests.m */; };
+		635444B31FAABFF00074DB64 /* P2PDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 635444B21FAABFF00074DB64 /* P2PDemoUITests.m */; };
+		636D37101FAC50CE00BD7FCA /* ATCallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 636D370F1FAC50CE00BD7FCA /* ATCallManager.m */; };
+		636D37131FAC604700BD7FCA /* ATVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636D37121FAC604700BD7FCA /* ATVideoViewController.m */; };
+		636D37161FAC605500BD7FCA /* ATAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636D37151FAC605500BD7FCA /* ATAudioViewController.m */; };
+		6374A2591FB2D3FB00F04E71 /* ATHistoryTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374A2571FB2D3FA00F04E71 /* ATHistoryTool.m */; };
+		6374A25C1FB2D40700F04E71 /* ATHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374A25B1FB2D40700F04E71 /* ATHistoryCell.m */; };
+		6374A25E1FB2D41900F04E71 /* ATHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374A25D1FB2D41900F04E71 /* ATHistoryModel.m */; };
+		6374A2611FB2D42400F04E71 /* ATHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374A25F1FB2D42300F04E71 /* ATHistoryViewController.m */; };
+		6374A2641FB3012600F04E71 /* iphone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6374A2631FB3012600F04E71 /* iphone.mp3 */; };
+		6375733C1FC6ADD6003C687F /* RTCP2PEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6375733B1FC6ADD6003C687F /* RTCP2PEngine.framework */; };
+		6375733D1FC6ADDB003C687F /* RTCP2PEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6375733B1FC6ADD6003C687F /* RTCP2PEngine.framework */; };
+		6375733E1FC6ADDB003C687F /* RTCP2PEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6375733B1FC6ADD6003C687F /* RTCP2PEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		637962911FAC0F9D0020566D /* ATStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637962901FAC0F9D0020566D /* ATStartViewController.m */; };
+		63A4C2B41FC2E984001D2D58 /* ATNetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A4C2B31FC2E984001D2D58 /* ATNetWorkTool.m */; };
+		917E0D15DFFE3A2B7A426F33 /* libPods-P2PDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B49163C74E32E9AF5AC010B /* libPods-P2PDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		635444A41FAABFF00074DB64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 635444831FAABFF00074DB64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6354448A1FAABFF00074DB64;
+			remoteInfo = P2PDemo;
+		};
+		635444AF1FAABFF00074DB64 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 635444831FAABFF00074DB64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6354448A1FAABFF00074DB64;
+			remoteInfo = P2PDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		63746DFD1FAAC2BF005C7636 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6375733E1FC6ADDB003C687F /* RTCP2PEngine.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0B49163C74E32E9AF5AC010B /* libPods-P2PDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-P2PDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63283B451FC511BA0037AF2F /* ATCountdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCountdown.m; sourceTree = "<group>"; };
+		63283B461FC511BB0037AF2F /* ATCallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCallView.m; sourceTree = "<group>"; };
+		63283B471FC511BB0037AF2F /* ATCountdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCountdown.h; sourceTree = "<group>"; };
+		63283B481FC511BB0037AF2F /* ATCallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCallView.h; sourceTree = "<group>"; };
+		63283B491FC511BB0037AF2F /* ATLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLabel.h; sourceTree = "<group>"; };
+		63283B4A1FC511BB0037AF2F /* ATLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLabel.m; sourceTree = "<group>"; };
+		63283B4B1FC511BB0037AF2F /* ATCallView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATCallView.xib; sourceTree = "<group>"; };
+		63283B501FC511C90037AF2F /* UIView+WZXLines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WZXLines.h"; sourceTree = "<group>"; };
+		63283B511FC511CA0037AF2F /* UIView+WZXLines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WZXLines.m"; sourceTree = "<group>"; };
+		634B3E8C1FAAF4680079716B /* ATCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCommon.m; sourceTree = "<group>"; };
+		634B3E8D1FAAF4680079716B /* ATCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCommon.h; sourceTree = "<group>"; };
+		634B3E8F1FAAF4860079716B /* P2PDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = P2PDemo.pch; sourceTree = "<group>"; };
+		634B3E901FAAFB940079716B /* ATMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATMainViewController.h; sourceTree = "<group>"; };
+		634B3E911FAAFB940079716B /* ATMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATMainViewController.m; sourceTree = "<group>"; };
+		6354448B1FAABFF00074DB64 /* P2PDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P2PDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6354448E1FAABFF00074DB64 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6354448F1FAABFF00074DB64 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		635444951FAABFF00074DB64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		635444971FAABFF00074DB64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6354449C1FAABFF00074DB64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6354449D1FAABFF00074DB64 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		635444A31FAABFF00074DB64 /* P2PDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = P2PDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		635444A71FAABFF00074DB64 /* P2PDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P2PDemoTests.m; sourceTree = "<group>"; };
+		635444A91FAABFF00074DB64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635444AE1FAABFF00074DB64 /* P2PDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = P2PDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		635444B21FAABFF00074DB64 /* P2PDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P2PDemoUITests.m; sourceTree = "<group>"; };
+		635444B41FAABFF00074DB64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		636D370E1FAC50CE00BD7FCA /* ATCallManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATCallManager.h; sourceTree = "<group>"; };
+		636D370F1FAC50CE00BD7FCA /* ATCallManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATCallManager.m; sourceTree = "<group>"; };
+		636D37111FAC604700BD7FCA /* ATVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATVideoViewController.h; sourceTree = "<group>"; };
+		636D37121FAC604700BD7FCA /* ATVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATVideoViewController.m; sourceTree = "<group>"; };
+		636D37141FAC605500BD7FCA /* ATAudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATAudioViewController.h; sourceTree = "<group>"; };
+		636D37151FAC605500BD7FCA /* ATAudioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATAudioViewController.m; sourceTree = "<group>"; };
+		637415AA1FB5774D00F97431 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		63746DF71FAAC0F3005C7636 /* P2PDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = P2PDemo.entitlements; sourceTree = "<group>"; };
+		6374A2571FB2D3FA00F04E71 /* ATHistoryTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATHistoryTool.m; sourceTree = "<group>"; };
+		6374A2581FB2D3FA00F04E71 /* ATHistoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATHistoryModel.h; sourceTree = "<group>"; };
+		6374A25A1FB2D40600F04E71 /* ATHistoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATHistoryCell.h; sourceTree = "<group>"; };
+		6374A25B1FB2D40700F04E71 /* ATHistoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATHistoryCell.m; sourceTree = "<group>"; };
+		6374A25D1FB2D41900F04E71 /* ATHistoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATHistoryModel.m; sourceTree = "<group>"; };
+		6374A25F1FB2D42300F04E71 /* ATHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATHistoryViewController.m; sourceTree = "<group>"; };
+		6374A2601FB2D42400F04E71 /* ATHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATHistoryViewController.h; sourceTree = "<group>"; };
+		6374A2621FB2D45E00F04E71 /* ATHistoryTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATHistoryTool.h; sourceTree = "<group>"; };
+		6374A2631FB3012600F04E71 /* iphone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = iphone.mp3; sourceTree = "<group>"; };
+		6375733B1FC6ADD6003C687F /* RTCP2PEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RTCP2PEngine.framework; sourceTree = "<group>"; };
+		6379628F1FAC0F9D0020566D /* ATStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATStartViewController.h; sourceTree = "<group>"; };
+		637962901FAC0F9D0020566D /* ATStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATStartViewController.m; sourceTree = "<group>"; };
+		63A4C2B21FC2E984001D2D58 /* ATNetWorkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATNetWorkTool.h; sourceTree = "<group>"; };
+		63A4C2B31FC2E984001D2D58 /* ATNetWorkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATNetWorkTool.m; sourceTree = "<group>"; };
+		D94899357E41F141A3DF3BE9 /* Pods-P2PDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-P2PDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-P2PDemo/Pods-P2PDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F4D7DAECCD60A3D25C265A48 /* Pods-P2PDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-P2PDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-P2PDemo/Pods-P2PDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		635444881FAABFF00074DB64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6375733D1FC6ADDB003C687F /* RTCP2PEngine.framework in Frameworks */,
+				917E0D15DFFE3A2B7A426F33 /* libPods-P2PDemo.a in Frameworks */,
+				6375733C1FC6ADD6003C687F /* RTCP2PEngine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		635444A01FAABFF00074DB64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		635444AB1FAABFF00074DB64 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A91FF5B97C2E4F24BB438BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				637415AA1FB5774D00F97431 /* CoreTelephony.framework */,
+				0B49163C74E32E9AF5AC010B /* libPods-P2PDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F0B760A8493EADA53488C5B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D94899357E41F141A3DF3BE9 /* Pods-P2PDemo.debug.xcconfig */,
+				F4D7DAECCD60A3D25C265A48 /* Pods-P2PDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		63283B431FC511580037AF2F /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				63283B501FC511C90037AF2F /* UIView+WZXLines.h */,
+				63283B511FC511CA0037AF2F /* UIView+WZXLines.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		63283B441FC511650037AF2F /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				63283B481FC511BB0037AF2F /* ATCallView.h */,
+				63283B461FC511BB0037AF2F /* ATCallView.m */,
+				63283B4B1FC511BB0037AF2F /* ATCallView.xib */,
+				63283B471FC511BB0037AF2F /* ATCountdown.h */,
+				63283B451FC511BA0037AF2F /* ATCountdown.m */,
+				63283B491FC511BB0037AF2F /* ATLabel.h */,
+				63283B4A1FC511BB0037AF2F /* ATLabel.m */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		635444821FAABFF00074DB64 = {
+			isa = PBXGroup;
+			children = (
+				6354448D1FAABFF00074DB64 /* P2PDemo */,
+				635444A61FAABFF00074DB64 /* P2PDemoTests */,
+				635444B11FAABFF00074DB64 /* P2PDemoUITests */,
+				6354448C1FAABFF00074DB64 /* Products */,
+				4F0B760A8493EADA53488C5B /* Pods */,
+				0A91FF5B97C2E4F24BB438BB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6354448C1FAABFF00074DB64 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6354448B1FAABFF00074DB64 /* P2PDemo.app */,
+				635444A31FAABFF00074DB64 /* P2PDemoTests.xctest */,
+				635444AE1FAABFF00074DB64 /* P2PDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6354448D1FAABFF00074DB64 /* P2PDemo */ = {
+			isa = PBXGroup;
+			children = (
+				63746DF71FAAC0F3005C7636 /* P2PDemo.entitlements */,
+				6375733B1FC6ADD6003C687F /* RTCP2PEngine.framework */,
+				63746DF61FAAC0B0005C7636 /* Helpers */,
+				63746DF51FAAC0AE005C7636 /* Main */,
+				63746DF41FAAC0AB005C7636 /* Room */,
+				6374A2561FB2D32500F04E71 /* History */,
+				63746DF31FAAC0A8005C7636 /* Base */,
+				635444941FAABFF00074DB64 /* Main.storyboard */,
+				635444971FAABFF00074DB64 /* Assets.xcassets */,
+				6354449C1FAABFF00074DB64 /* Info.plist */,
+				6354449D1FAABFF00074DB64 /* main.m */,
+				634B3E8F1FAAF4860079716B /* P2PDemo.pch */,
+				6374A2631FB3012600F04E71 /* iphone.mp3 */,
+			);
+			path = P2PDemo;
+			sourceTree = "<group>";
+		};
+		635444A61FAABFF00074DB64 /* P2PDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				635444A71FAABFF00074DB64 /* P2PDemoTests.m */,
+				635444A91FAABFF00074DB64 /* Info.plist */,
+			);
+			path = P2PDemoTests;
+			sourceTree = "<group>";
+		};
+		635444B11FAABFF00074DB64 /* P2PDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				635444B21FAABFF00074DB64 /* P2PDemoUITests.m */,
+				635444B41FAABFF00074DB64 /* Info.plist */,
+			);
+			path = P2PDemoUITests;
+			sourceTree = "<group>";
+		};
+		63746DF31FAAC0A8005C7636 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6354448E1FAABFF00074DB64 /* AppDelegate.h */,
+				6354448F1FAABFF00074DB64 /* AppDelegate.m */,
+				636D370E1FAC50CE00BD7FCA /* ATCallManager.h */,
+				636D370F1FAC50CE00BD7FCA /* ATCallManager.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		63746DF41FAAC0AB005C7636 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				636D37111FAC604700BD7FCA /* ATVideoViewController.h */,
+				636D37121FAC604700BD7FCA /* ATVideoViewController.m */,
+				636D37141FAC605500BD7FCA /* ATAudioViewController.h */,
+				636D37151FAC605500BD7FCA /* ATAudioViewController.m */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		63746DF51FAAC0AE005C7636 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				634B3E901FAAFB940079716B /* ATMainViewController.h */,
+				634B3E911FAAFB940079716B /* ATMainViewController.m */,
+				6379628F1FAC0F9D0020566D /* ATStartViewController.h */,
+				637962901FAC0F9D0020566D /* ATStartViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		63746DF61FAAC0B0005C7636 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				634B3E8D1FAAF4680079716B /* ATCommon.h */,
+				634B3E8C1FAAF4680079716B /* ATCommon.m */,
+				63A4C2B21FC2E984001D2D58 /* ATNetWorkTool.h */,
+				63A4C2B31FC2E984001D2D58 /* ATNetWorkTool.m */,
+				63283B441FC511650037AF2F /* Custom */,
+				63283B431FC511580037AF2F /* Lib */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		6374A2561FB2D32500F04E71 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				6374A2601FB2D42400F04E71 /* ATHistoryViewController.h */,
+				6374A25F1FB2D42300F04E71 /* ATHistoryViewController.m */,
+				6374A2621FB2D45E00F04E71 /* ATHistoryTool.h */,
+				6374A2571FB2D3FA00F04E71 /* ATHistoryTool.m */,
+				6374A2581FB2D3FA00F04E71 /* ATHistoryModel.h */,
+				6374A25D1FB2D41900F04E71 /* ATHistoryModel.m */,
+				6374A25A1FB2D40600F04E71 /* ATHistoryCell.h */,
+				6374A25B1FB2D40700F04E71 /* ATHistoryCell.m */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6354448A1FAABFF00074DB64 /* P2PDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 635444B71FAABFF00074DB64 /* Build configuration list for PBXNativeTarget "P2PDemo" */;
+			buildPhases = (
+				F89FB0CABDE945F469A9FE1D /* [CP] Check Pods Manifest.lock */,
+				635444871FAABFF00074DB64 /* Sources */,
+				635444881FAABFF00074DB64 /* Frameworks */,
+				635444891FAABFF00074DB64 /* Resources */,
+				9BD6F4C751D7068610EB3C82 /* [CP] Embed Pods Frameworks */,
+				61003C69F0F2710DA08BF689 /* [CP] Copy Pods Resources */,
+				63746DFD1FAAC2BF005C7636 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = P2PDemo;
+			productName = P2PDemo;
+			productReference = 6354448B1FAABFF00074DB64 /* P2PDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		635444A21FAABFF00074DB64 /* P2PDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 635444BA1FAABFF00074DB64 /* Build configuration list for PBXNativeTarget "P2PDemoTests" */;
+			buildPhases = (
+				6354449F1FAABFF00074DB64 /* Sources */,
+				635444A01FAABFF00074DB64 /* Frameworks */,
+				635444A11FAABFF00074DB64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				635444A51FAABFF00074DB64 /* PBXTargetDependency */,
+			);
+			name = P2PDemoTests;
+			productName = P2PDemoTests;
+			productReference = 635444A31FAABFF00074DB64 /* P2PDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		635444AD1FAABFF00074DB64 /* P2PDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 635444BD1FAABFF00074DB64 /* Build configuration list for PBXNativeTarget "P2PDemoUITests" */;
+			buildPhases = (
+				635444AA1FAABFF00074DB64 /* Sources */,
+				635444AB1FAABFF00074DB64 /* Frameworks */,
+				635444AC1FAABFF00074DB64 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				635444B01FAABFF00074DB64 /* PBXTargetDependency */,
+			);
+			name = P2PDemoUITests;
+			productName = P2PDemoUITests;
+			productReference = 635444AE1FAABFF00074DB64 /* P2PDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		635444831FAABFF00074DB64 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = jh;
+				TargetAttributes = {
+					6354448A1FAABFF00074DB64 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
+					};
+					635444A21FAABFF00074DB64 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6354448A1FAABFF00074DB64;
+					};
+					635444AD1FAABFF00074DB64 = {
+						CreatedOnToolsVersion = 9.0.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6354448A1FAABFF00074DB64;
+					};
+				};
+			};
+			buildConfigurationList = 635444861FAABFF00074DB64 /* Build configuration list for PBXProject "P2PDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 635444821FAABFF00074DB64;
+			productRefGroup = 6354448C1FAABFF00074DB64 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6354448A1FAABFF00074DB64 /* P2PDemo */,
+				635444A21FAABFF00074DB64 /* P2PDemoTests */,
+				635444AD1FAABFF00074DB64 /* P2PDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		635444891FAABFF00074DB64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				635444981FAABFF00074DB64 /* Assets.xcassets in Resources */,
+				6374A2641FB3012600F04E71 /* iphone.mp3 in Resources */,
+				635444961FAABFF00074DB64 /* Main.storyboard in Resources */,
+				63283B4F1FC511BB0037AF2F /* ATCallView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		635444A11FAABFF00074DB64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		635444AC1FAABFF00074DB64 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61003C69F0F2710DA08BF689 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-P2PDemo/Pods-P2PDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BD6F4C751D7068610EB3C82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-P2PDemo/Pods-P2PDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F89FB0CABDE945F469A9FE1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		635444871FAABFF00074DB64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63283B4E1FC511BB0037AF2F /* ATLabel.m in Sources */,
+				637962911FAC0F9D0020566D /* ATStartViewController.m in Sources */,
+				63283B4C1FC511BB0037AF2F /* ATCountdown.m in Sources */,
+				63283B4D1FC511BB0037AF2F /* ATCallView.m in Sources */,
+				636D37131FAC604700BD7FCA /* ATVideoViewController.m in Sources */,
+				63A4C2B41FC2E984001D2D58 /* ATNetWorkTool.m in Sources */,
+				6374A2591FB2D3FB00F04E71 /* ATHistoryTool.m in Sources */,
+				6354449E1FAABFF00074DB64 /* main.m in Sources */,
+				6374A25E1FB2D41900F04E71 /* ATHistoryModel.m in Sources */,
+				6374A25C1FB2D40700F04E71 /* ATHistoryCell.m in Sources */,
+				634B3E8E1FAAF4680079716B /* ATCommon.m in Sources */,
+				636D37101FAC50CE00BD7FCA /* ATCallManager.m in Sources */,
+				6374A2611FB2D42400F04E71 /* ATHistoryViewController.m in Sources */,
+				63283B521FC511CA0037AF2F /* UIView+WZXLines.m in Sources */,
+				636D37161FAC605500BD7FCA /* ATAudioViewController.m in Sources */,
+				634B3E921FAAFB940079716B /* ATMainViewController.m in Sources */,
+				635444901FAABFF00074DB64 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6354449F1FAABFF00074DB64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				635444A81FAABFF00074DB64 /* P2PDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		635444AA1FAABFF00074DB64 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				635444B31FAABFF00074DB64 /* P2PDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		635444A51FAABFF00074DB64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6354448A1FAABFF00074DB64 /* P2PDemo */;
+			targetProxy = 635444A41FAABFF00074DB64 /* PBXContainerItemProxy */;
+		};
+		635444B01FAABFF00074DB64 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6354448A1FAABFF00074DB64 /* P2PDemo */;
+			targetProxy = 635444AF1FAABFF00074DB64 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		635444941FAABFF00074DB64 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				635444951FAABFF00074DB64 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		635444B51FAABFF00074DB64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		635444B61FAABFF00074DB64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		635444B81FAABFF00074DB64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D94899357E41F141A3DF3BE9 /* Pods-P2PDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5543CP4MRT;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/P2PDemo",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/P2PDemo.pch";
+				INFOPLIST_FILE = P2PDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-l\"jcore-ios-1.1.5\"",
+					"-l\"jpush-ios-3.0.2\"",
+					"-l\"resolv\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"UserNotifications\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dync.P2PDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		635444B91FAABFF00074DB64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4D7DAECCD60A3D25C265A48 /* Pods-P2PDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5543CP4MRT;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/P2PDemo",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/P2PDemo.pch";
+				INFOPLIST_FILE = P2PDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Masonry\"",
+					"-l\"jcore-ios-1.1.5\"",
+					"-l\"jpush-ios-3.0.2\"",
+					"-l\"resolv\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-weak_framework",
+					"\"UserNotifications\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dync.P2PDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		635444BB1FAABFF00074DB64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5543CP4MRT;
+				INFOPLIST_FILE = P2PDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dync.P2PDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/P2PDemo.app/P2PDemo";
+			};
+			name = Debug;
+		};
+		635444BC1FAABFF00074DB64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5543CP4MRT;
+				INFOPLIST_FILE = P2PDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dync.P2PDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/P2PDemo.app/P2PDemo";
+			};
+			name = Release;
+		};
+		635444BE1FAABFF00074DB64 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5543CP4MRT;
+				INFOPLIST_FILE = P2PDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dync.P2PDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = P2PDemo;
+			};
+			name = Debug;
+		};
+		635444BF1FAABFF00074DB64 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5543CP4MRT;
+				INFOPLIST_FILE = P2PDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dync.P2PDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = P2PDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		635444861FAABFF00074DB64 /* Build configuration list for PBXProject "P2PDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				635444B51FAABFF00074DB64 /* Debug */,
+				635444B61FAABFF00074DB64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		635444B71FAABFF00074DB64 /* Build configuration list for PBXNativeTarget "P2PDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				635444B81FAABFF00074DB64 /* Debug */,
+				635444B91FAABFF00074DB64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		635444BA1FAABFF00074DB64 /* Build configuration list for PBXNativeTarget "P2PDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				635444BB1FAABFF00074DB64 /* Debug */,
+				635444BC1FAABFF00074DB64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		635444BD1FAABFF00074DB64 /* Build configuration list for PBXNativeTarget "P2PDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				635444BE1FAABFF00074DB64 /* Debug */,
+				635444BF1FAABFF00074DB64 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 635444831FAABFF00074DB64 /* Project object */;
+}
