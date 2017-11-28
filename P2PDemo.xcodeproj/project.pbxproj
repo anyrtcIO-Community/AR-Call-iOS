@@ -23,14 +23,14 @@
 		636D37101FAC50CE00BD7FCA /* ATCallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 636D370F1FAC50CE00BD7FCA /* ATCallManager.m */; };
 		636D37131FAC604700BD7FCA /* ATVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636D37121FAC604700BD7FCA /* ATVideoViewController.m */; };
 		636D37161FAC605500BD7FCA /* ATAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636D37151FAC605500BD7FCA /* ATAudioViewController.m */; };
+		6372852C1FCD08CD00026737 /* RTCP2PEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372852B1FCD08CD00026737 /* RTCP2PEngine.framework */; };
+		6372852D1FCD08ED00026737 /* RTCP2PEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372852B1FCD08CD00026737 /* RTCP2PEngine.framework */; };
+		6372852E1FCD08ED00026737 /* RTCP2PEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6372852B1FCD08CD00026737 /* RTCP2PEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6374A2591FB2D3FB00F04E71 /* ATHistoryTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374A2571FB2D3FA00F04E71 /* ATHistoryTool.m */; };
 		6374A25C1FB2D40700F04E71 /* ATHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374A25B1FB2D40700F04E71 /* ATHistoryCell.m */; };
 		6374A25E1FB2D41900F04E71 /* ATHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374A25D1FB2D41900F04E71 /* ATHistoryModel.m */; };
 		6374A2611FB2D42400F04E71 /* ATHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374A25F1FB2D42300F04E71 /* ATHistoryViewController.m */; };
 		6374A2641FB3012600F04E71 /* iphone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6374A2631FB3012600F04E71 /* iphone.mp3 */; };
-		6375733C1FC6ADD6003C687F /* RTCP2PEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6375733B1FC6ADD6003C687F /* RTCP2PEngine.framework */; };
-		6375733D1FC6ADDB003C687F /* RTCP2PEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6375733B1FC6ADD6003C687F /* RTCP2PEngine.framework */; };
-		6375733E1FC6ADDB003C687F /* RTCP2PEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6375733B1FC6ADD6003C687F /* RTCP2PEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		637962911FAC0F9D0020566D /* ATStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637962901FAC0F9D0020566D /* ATStartViewController.m */; };
 		63A4C2B41FC2E984001D2D58 /* ATNetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A4C2B31FC2E984001D2D58 /* ATNetWorkTool.m */; };
 		917E0D15DFFE3A2B7A426F33 /* libPods-P2PDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B49163C74E32E9AF5AC010B /* libPods-P2PDemo.a */; };
@@ -60,7 +60,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6375733E1FC6ADDB003C687F /* RTCP2PEngine.framework in Embed Frameworks */,
+				6372852E1FCD08ED00026737 /* RTCP2PEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +102,7 @@
 		636D37121FAC604700BD7FCA /* ATVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATVideoViewController.m; sourceTree = "<group>"; };
 		636D37141FAC605500BD7FCA /* ATAudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATAudioViewController.h; sourceTree = "<group>"; };
 		636D37151FAC605500BD7FCA /* ATAudioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATAudioViewController.m; sourceTree = "<group>"; };
+		6372852B1FCD08CD00026737 /* RTCP2PEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RTCP2PEngine.framework; sourceTree = "<group>"; };
 		637415AA1FB5774D00F97431 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		63746DF71FAAC0F3005C7636 /* P2PDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = P2PDemo.entitlements; sourceTree = "<group>"; };
 		6374A2571FB2D3FA00F04E71 /* ATHistoryTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATHistoryTool.m; sourceTree = "<group>"; };
@@ -113,7 +114,6 @@
 		6374A2601FB2D42400F04E71 /* ATHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATHistoryViewController.h; sourceTree = "<group>"; };
 		6374A2621FB2D45E00F04E71 /* ATHistoryTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATHistoryTool.h; sourceTree = "<group>"; };
 		6374A2631FB3012600F04E71 /* iphone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = iphone.mp3; sourceTree = "<group>"; };
-		6375733B1FC6ADD6003C687F /* RTCP2PEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RTCP2PEngine.framework; sourceTree = "<group>"; };
 		6379628F1FAC0F9D0020566D /* ATStartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATStartViewController.h; sourceTree = "<group>"; };
 		637962901FAC0F9D0020566D /* ATStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATStartViewController.m; sourceTree = "<group>"; };
 		63A4C2B21FC2E984001D2D58 /* ATNetWorkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATNetWorkTool.h; sourceTree = "<group>"; };
@@ -127,9 +127,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6375733D1FC6ADDB003C687F /* RTCP2PEngine.framework in Frameworks */,
+				6372852D1FCD08ED00026737 /* RTCP2PEngine.framework in Frameworks */,
 				917E0D15DFFE3A2B7A426F33 /* libPods-P2PDemo.a in Frameworks */,
-				6375733C1FC6ADD6003C687F /* RTCP2PEngine.framework in Frameworks */,
+				6372852C1FCD08CD00026737 /* RTCP2PEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				63746DF71FAAC0F3005C7636 /* P2PDemo.entitlements */,
-				6375733B1FC6ADD6003C687F /* RTCP2PEngine.framework */,
+				6372852B1FCD08CD00026737 /* RTCP2PEngine.framework */,
 				63746DF61FAAC0B0005C7636 /* Helpers */,
 				63746DF51FAAC0AE005C7636 /* Main */,
 				63746DF41FAAC0AB005C7636 /* Room */,

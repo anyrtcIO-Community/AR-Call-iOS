@@ -21,8 +21,8 @@
 #warning - 前往https://www.anyrtc.io/home创建应用获取相关ID
     //配置信息
     [AnyRTCP2PEngine initEngineWithAnyRTCInfo:developerID andAppId:appID andKey:key andToke:token];
-    
-    [AnyRTCP2PEngine configServerForPriCloud:@"teameeting.anyrtc.io" andPort:9060];
+    //配置私有云，默认无需配置
+    //[AnyRTCP2PEngine configServerForPriCloud:@"XXX" andPort:nil];
     
     [NSThread sleepForTimeInterval:0.5];
     // 配置IQKeyboardManager
