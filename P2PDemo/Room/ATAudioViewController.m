@@ -55,6 +55,7 @@
             //挂断
             self.historyModel.state = @"已接通话";
             [self.callManager.p2PKit endCall:self.peerId];
+            [self.callManager.p2PKit close];
             [self.navigationController popViewControllerAnimated:YES];
             break;
         case 103:
@@ -99,11 +100,13 @@
                     weakSelf.historyModel.state = @"拒接通话";
                     //拒接
                     [weakSelf.callManager.p2PKit rejectCall:weakSelf.peerId];
+                    [weakSelf.callManager.p2PKit close];
                     [weakSelf.navigationController popViewControllerAnimated:YES];
                     break;
                 case 102:
                     //呼叫挂断
                     [weakSelf.callManager.p2PKit endCall:weakSelf.peerId];
+                    [weakSelf.callManager.p2PKit close];
                     [weakSelf.navigationController popViewControllerAnimated:YES];
                     break;
                 default:

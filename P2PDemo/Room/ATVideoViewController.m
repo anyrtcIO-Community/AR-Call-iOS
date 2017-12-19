@@ -264,11 +264,13 @@
                     weakSelf.historyModel.state = @"拒接通话";
                     //拒接
                     [weakSelf.callManager.p2PKit rejectCall:weakSelf.peerId];
+                    [weakSelf.callManager.p2PKit close];
                     [weakSelf.navigationController popViewControllerAnimated:YES];
                     break;
                 case 102:
                     //呼叫挂断
                     [weakSelf.callManager.p2PKit endCall:weakSelf.peerId];
+                    [weakSelf.callManager.p2PKit close];
                     [weakSelf.navigationController popViewControllerAnimated:YES];
                     break;
                 default:
