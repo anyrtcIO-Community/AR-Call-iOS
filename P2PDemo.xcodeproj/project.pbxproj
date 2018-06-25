@@ -23,9 +23,6 @@
 		636D37101FAC50CE00BD7FCA /* ATCallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 636D370F1FAC50CE00BD7FCA /* ATCallManager.m */; };
 		636D37131FAC604700BD7FCA /* ATVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636D37121FAC604700BD7FCA /* ATVideoViewController.m */; };
 		636D37161FAC605500BD7FCA /* ATAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636D37151FAC605500BD7FCA /* ATAudioViewController.m */; };
-		6372852C1FCD08CD00026737 /* RTCP2PEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372852B1FCD08CD00026737 /* RTCP2PEngine.framework */; };
-		6372852D1FCD08ED00026737 /* RTCP2PEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6372852B1FCD08CD00026737 /* RTCP2PEngine.framework */; };
-		6372852E1FCD08ED00026737 /* RTCP2PEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6372852B1FCD08CD00026737 /* RTCP2PEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6374A2591FB2D3FB00F04E71 /* ATHistoryTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374A2571FB2D3FA00F04E71 /* ATHistoryTool.m */; };
 		6374A25C1FB2D40700F04E71 /* ATHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374A25B1FB2D40700F04E71 /* ATHistoryCell.m */; };
 		6374A25E1FB2D41900F04E71 /* ATHistoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6374A25D1FB2D41900F04E71 /* ATHistoryModel.m */; };
@@ -60,7 +57,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6372852E1FCD08ED00026737 /* RTCP2PEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,7 +98,6 @@
 		636D37121FAC604700BD7FCA /* ATVideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATVideoViewController.m; sourceTree = "<group>"; };
 		636D37141FAC605500BD7FCA /* ATAudioViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATAudioViewController.h; sourceTree = "<group>"; };
 		636D37151FAC605500BD7FCA /* ATAudioViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATAudioViewController.m; sourceTree = "<group>"; };
-		6372852B1FCD08CD00026737 /* RTCP2PEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RTCP2PEngine.framework; sourceTree = "<group>"; };
 		637415AA1FB5774D00F97431 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		63746DF71FAAC0F3005C7636 /* P2PDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = P2PDemo.entitlements; sourceTree = "<group>"; };
 		6374A2571FB2D3FA00F04E71 /* ATHistoryTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATHistoryTool.m; sourceTree = "<group>"; };
@@ -127,9 +122,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6372852D1FCD08ED00026737 /* RTCP2PEngine.framework in Frameworks */,
 				917E0D15DFFE3A2B7A426F33 /* libPods-P2PDemo.a in Frameworks */,
-				6372852C1FCD08CD00026737 /* RTCP2PEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				63746DF71FAAC0F3005C7636 /* P2PDemo.entitlements */,
-				6372852B1FCD08CD00026737 /* RTCP2PEngine.framework */,
 				63746DF61FAAC0B0005C7636 /* Helpers */,
 				63746DF51FAAC0AE005C7636 /* Main */,
 				63746DF41FAAC0AB005C7636 /* Room */,
@@ -378,7 +370,7 @@
 		635444831FAABFF00074DB64 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = jh;
 				TargetAttributes = {
 					6354448A1FAABFF00074DB64 = {
@@ -463,9 +455,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-P2PDemo/Pods-P2PDemo-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/IQKeyboardManager.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -478,9 +473,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-P2PDemo/Pods-P2PDemo-frameworks.sh",
+				"${PODS_ROOT}/RTCP2PEngine/RTCP2PEngine/RTCP2PEngine.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RTCP2PEngine.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -493,13 +491,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-P2PDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -586,6 +587,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -593,6 +595,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -641,6 +644,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -648,6 +652,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

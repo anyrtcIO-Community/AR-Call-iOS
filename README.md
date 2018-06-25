@@ -10,6 +10,21 @@ Xcode 8以上</br>
 ### 2、运行环境
 真机运行、iOS 8.0以上（建议最新）
 
+## 导入SDK
+
+### Cocoapods导入
+```
+pod 'RTCP2PEngine', '~> 1.0.1'
+```
+### 手动导入
+
+1. 下载Demo，或者前往[anyRTC官网](https://www.anyrtc.io/resoure)下载SDK</br>
+![list_directory](/image/list_directory.png)
+
+2. 在Xcode中选择“Add files to 'Your project name'...”，将RTCP2PEngine.framework添加到你的工程目录中</br>
+
+3.  打开General->Embedded Binaries中添加RTCP2PEngine.framework</br>
+
 
 ## 如何使用？
 
@@ -30,10 +45,10 @@ Xcode 8以上</br>
 [更多详细方法使用，请查看API文档](https://www.anyrtc.io/resoure)
 
 ## 项目展示
-![P2P](P2P.gif)
+![P2P](/image/P2P.gif)
 
 ## 扫描二维码下载demo
-![P2P_scan@3x](P2P_scan@3x.png)
+![P2P_scan@3x](/image/P2P_scan@3x.png)
 
 
 ## 支持的系统平台
