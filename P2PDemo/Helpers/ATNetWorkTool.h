@@ -11,7 +11,7 @@
 
 #define TIMEOUT 10.0f
 
-#define requestUrl @"XXX"
+#define requestUrl @"http://api.p2p.teameeting.cn:3663/"
 
 typedef void(^SucessBlock)(NSDictionary * dict);
 

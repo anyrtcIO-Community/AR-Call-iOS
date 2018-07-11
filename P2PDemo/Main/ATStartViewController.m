@@ -89,9 +89,9 @@
             //重新呼叫
             if (!self.isOn) {
                 RTCP2POption *option = [RTCP2POption defaultOption];
-                option.videoMode = RTCP2P_Videos_QHD;
+                option.videoMode = AnyRTCVideoQuality_Medium2;
                 option.isFont = YES;
-                [[[ATCallManager sharedInstance] p2PKit] turnOn:self.userId andOption:option];
+                [[[ATCallManager sharedInstance] p2PKit] turnOn:self.userId];
             }
         }
         default:

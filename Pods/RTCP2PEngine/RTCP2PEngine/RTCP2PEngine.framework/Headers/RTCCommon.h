@@ -117,6 +117,7 @@ typedef enum {
     RTMPC_LINE_V_Fullscrn = 0,		// 　默认模式：主播全屏，副主播小屏
     RTMPC_LINE_V_1_equal_others = 1,	// 　主播跟副主播视频大小一致
     RTMPC_LINE_V_1big_3small = 2,		// 　主播大屏（非全屏）副主播小屏
+	RTMPC_LINE_V_1full_4small = 3,		// 主大(是全屏),四小副
 }RTMPCLineVideoLayout;
 
 typedef enum {
@@ -139,12 +140,16 @@ typedef enum {
 }RTMPCVideoMode;
 
 typedef enum {
-    RTMPC_SCRN_Portrait = 0,
-    RTMPC_SCRN_LandscapeRight,
-    RTMPC_SCRN_PortraitUpsideDown,
-    RTMPC_SCRN_LandscapeLeft,
-    RTMPC_SCRN_Auto
-}RTMPCScreenOrientation;
+    AnyRTCVideoQuality_Low1 = 0,      // 320*240 - 128kbps
+    AnyRTCVideoQuality_Low2,          // 352*288 - 256kbps
+    AnyRTCVideoQuality_Low3,          // 352*288 - 384kbps
+    AnyRTCVideoQuality_Medium1,       // 640*480 - 384kbps
+    AnyRTCVideoQuality_Medium2,       // 640*480 - 512kbps
+    AnyRTCVideoQuality_Medium3,       // 640*480 - 768kbps
+    AnyRTCVideoQuality_Height1,       // 960*540 - 1024kbps
+    AnyRTCVideoQuality_Height2,       // 1280*720 - 1280kbps
+    AnyRTCVideoQuality_Height3,       // 1920*1080 - 2048kbps
+}AnyRTCVideoQualityModel;
 
 typedef enum {
     RTC_SCRN_Portrait = 0,
@@ -190,4 +195,33 @@ typedef enum {
     RTMPC_Nomal_Message_Type = 0,//普通文本消息
     RTMPC_Barrage_Message_Type = 1   //弹幕消息
 }RTMPCMessageType;
+
+// 相机类型
+typedef enum {
+    AnyRTCCameraTypeNomal = 0,
+    AnyRTCCameraTypeBeauty = 1
+}AnyRTCCameraType;
+
+//滤镜常量
+typedef enum : char {
+    //美颜滤镜
+    AnyCameraDeviceFilter_Beautiful=0,
+    //原始
+    AnyCameraDeviceFilter_Original=1,
+    //高斯模糊
+    AnyCameraDeviceFilter_GaussianBlur=2
+    
+} AnyCameraDeviceFilter;
+
+typedef enum {
+    //表示按比例缩放并且填满view，意味着图片可能超出view，可能被裁减掉
+    AnyRTCVideoRenderScaleAspectFill = 0,
+    //表示通过缩放来填满view，也就是说图片会变形
+    AnyRTCVideoRenderScaleToFill,
+    //表示按比例缩放并且图片要完全显示出来，意味着view可能会留有空白
+    AnyRTCVideoRenderScaleAspectFit
+    
+}AnyRTCVideoRenderMode;
+
+
 #endif	// __RTC_COMMON_H__

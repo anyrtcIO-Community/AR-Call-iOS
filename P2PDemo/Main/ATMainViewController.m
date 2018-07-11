@@ -22,8 +22,6 @@
 
 @property (nonatomic, strong) ATCountdown *verificationButton;
 
-//配置信息
-@property (nonatomic, strong) RTCP2POption *option;
 //用户id（手机号）
 @property (nonatomic, copy) NSString *userId;
 
@@ -40,7 +38,7 @@
         self.codeTextField.hidden = YES;
         [self.userButton setTitle:self.userId forState:UIControlStateNormal];
         //P2P上线
-        [[[ATCallManager sharedInstance] p2PKit] turnOn:self.userButton.titleLabel.text andOption:self.option];
+        [[[ATCallManager sharedInstance] p2PKit] turnOn:self.userButton.titleLabel.text];
     } else {
         //登录
         self.userButton.hidden = YES;
@@ -133,7 +131,7 @@
         case 103:
             //重新上线
             if (!self.isOn) {
-                [[[ATCallManager sharedInstance] p2PKit] turnOn:self.userButton.titleLabel.text andOption:self.option];
+                [[[ATCallManager sharedInstance] p2PKit] turnOn:self.userButton.titleLabel.text];
             }
             break;
         default:
@@ -148,7 +146,7 @@
         self.codeTextField.hidden = YES;
         self.userButton.hidden = NO;
         [self.userButton setTitle:self.userId forState:UIControlStateNormal];
-        [[[ATCallManager sharedInstance] p2PKit] turnOn:self.userButton.titleLabel.text andOption:self.option];
+        [[[ATCallManager sharedInstance] p2PKit] turnOn:self.userButton.titleLabel.text];
         [[NSUserDefaults standardUserDefaults] setObject:self.userId forKey:User_PhoneNumber];
         [[NSUserDefaults standardUserDefaults]synchronize];
     }
@@ -181,16 +179,6 @@
 }
 
 #pragma mark - other
-- (RTCP2POption *)option{
-    if (!_option) {
-        //配置信息
-        _option = [RTCP2POption defaultOption];
-        _option.videoMode = RTCP2P_Videos_QHD;
-        _option.isFont = YES;
-    }
-    return _option;
-}
-
 - (UIButton *)leftCodeButton{
     if (!_leftCodeButton) {
         _leftCodeButton = [UIButton buttonWithType:UIButtonTypeCustom];

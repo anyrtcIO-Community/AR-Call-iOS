@@ -20,6 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Bugly (2.5.0)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
@@ -28,21 +29,23 @@ PODS:
   - JPush (3.0.2):
     - JCore (~> 1.1.1)
   - Masonry (1.1.0)
-  - RTCP2PEngine (1.0.1)
+  - RTCP2PEngine (1.0.4)
   - XHToast (1.4.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.3)
+  - Bugly
   - FMDB (~> 2.6.2)
   - IQKeyboardManager (~> 5.0.3)
   - JPush (= 3.0.2)
   - Masonry
-  - RTCP2PEngine (~> 1.0.1)
+  - RTCP2PEngine (~> 1.0.4)
   - XHToast (~> 1.4.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - Bugly
     - FMDB
     - IQKeyboardManager
     - JCore
@@ -53,14 +56,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   IQKeyboardManager: dc5b18b47e5170e4d150bb86dbee8c8a2fc48997
   JCore: 9bd9c770c877c583d98b90a68792b8361974c231
   JPush: 01a693fafe51b93eafc2e368bbc7a7cc07e12ce4
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  RTCP2PEngine: 2b4ad20121ff703f8cafd8ac120ca2bff8faddf7
+  RTCP2PEngine: 6a9ebb5b256d9a5fc41ee8d892f61a7c2d1c2a7c
   XHToast: 3b354766d56d9df8fef8e64387bbd25c90d71a86
 
-PODFILE CHECKSUM: 11a1e4325bbf30034583d2cce7d0399e169d7148
+PODFILE CHECKSUM: 845cfe4036eeda196cfc2e49f99f60741a80409b
 
 COCOAPODS: 1.5.0

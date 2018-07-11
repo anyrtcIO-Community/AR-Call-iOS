@@ -16,19 +16,23 @@
 @interface RTCP2PKit : NSObject
 
 
-+ (instancetype)sharedInstance;
-
-@property (nonatomic, weak) id<RTCP2PKitDelegate> delegate;
+/**
+ 实例化P2P对象
+ 
+ @param delegate RTC相关回调代理
+ @param option 配置项
+ @return P2P对象
+ */
+- (instancetype)initWithDelegate:(id <RTCP2PKitDelegate>)delegate andOption:(RTCP2POption *)option;
 
 #pragma mark - P2P 呼叫方法
 /**
  上线
 
  @param strUserId 用户自己的Id
- @param option 配置项
  说明：如果更换用户，先turnOff
  */
-- (void)turnOn:(NSString *)strUserId andOption:(RTCP2POption *)option;
+- (void)turnOn:(NSString *)strUserId;
 /**
  下线
  */
@@ -40,7 +44,13 @@
  @param render 本地视频窗口
  */
 - (void)setLocalVideoCapturer:(UIView*)render;
-
+/**
+ 设置滤镜（默认开启美颜）
+ 
+ @param eFilter 滤镜模式
+ 说明:只有使用美颜相机模式才有用
+ */
+- (void)setCameraFilter:(AnyCameraDeviceFilter)eFilter;
 /**
  呼叫
 

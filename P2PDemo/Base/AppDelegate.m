@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <RTCP2PEngine/AnyRTCP2PEngine.h>
+#import <Bugly/Bugly.h>
 
 @interface AppDelegate ()
 
@@ -27,6 +28,8 @@
     [NSThread sleepForTimeInterval:0.5];
     // 配置IQKeyboardManager
     [self configurationIQKeyboard];
+    
+    [Bugly startWithAppId:@"4ebcef40f6"];
     return YES;
 }
 

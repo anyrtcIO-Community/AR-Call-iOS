@@ -27,8 +27,11 @@ static ATCallManager *manager = nil;
 - (instancetype)init
 {
     if (self = [super init]) {
-        self.p2PKit = [RTCP2PKit sharedInstance];
-        self.p2PKit.delegate = self;
+        //配置信息
+        RTCP2POption *option = [RTCP2POption defaultOption];
+        option.videoMode = AnyRTCVideoQuality_Medium2;
+        option.isFont = YES;
+        self.p2PKit = [[RTCP2PKit alloc] initWithDelegate:self andOption:option];
     }
     return self;
 }
