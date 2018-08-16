@@ -1,7 +1,7 @@
 platform :ios,'8.0'
 target 'P2PDemo' do
     
-pod 'RTCP2PEngine', '~> 1.0.4'
+#pod 'RTCP2PEngine', '~> 1.0.4'
 pod 'Masonry'
 pod 'JPush', '3.0.2'
 pod 'XHToast', '~> 1.4.0'

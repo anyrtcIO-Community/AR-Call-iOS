@@ -29,7 +29,6 @@ PODS:
   - JPush (3.0.2):
     - JCore (~> 1.1.1)
   - Masonry (1.1.0)
-  - RTCP2PEngine (1.0.4)
   - XHToast (1.4.0)
 
 DEPENDENCIES:
@@ -39,11 +38,10 @@ DEPENDENCIES:
   - IQKeyboardManager (~> 5.0.3)
   - JPush (= 3.0.2)
   - Masonry
-  - RTCP2PEngine (~> 1.0.4)
   - XHToast (~> 1.4.0)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AFNetworking
     - Bugly
     - FMDB
@@ -51,7 +49,6 @@ SPEC REPOS:
     - JCore
     - JPush
     - Masonry
-    - RTCP2PEngine
     - XHToast
 
 SPEC CHECKSUMS:
@@ -62,9 +59,8 @@ SPEC CHECKSUMS:
   JCore: 9bd9c770c877c583d98b90a68792b8361974c231
   JPush: 01a693fafe51b93eafc2e368bbc7a7cc07e12ce4
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  RTCP2PEngine: 6a9ebb5b256d9a5fc41ee8d892f61a7c2d1c2a7c
   XHToast: 3b354766d56d9df8fef8e64387bbd25c90d71a86
 
-PODFILE CHECKSUM: 845cfe4036eeda196cfc2e49f99f60741a80409b
+PODFILE CHECKSUM: cf7d61840bbd600f16e2044f530732b07d18afe8
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

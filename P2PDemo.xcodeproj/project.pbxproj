@@ -30,6 +30,9 @@
 		6374A2641FB3012600F04E71 /* iphone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6374A2631FB3012600F04E71 /* iphone.mp3 */; };
 		637962911FAC0F9D0020566D /* ATStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 637962901FAC0F9D0020566D /* ATStartViewController.m */; };
 		63A4C2B41FC2E984001D2D58 /* ATNetWorkTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A4C2B31FC2E984001D2D58 /* ATNetWorkTool.m */; };
+		788F3342211C2112008EA08F /* RTCP2PEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788F3341211C2112008EA08F /* RTCP2PEngine.framework */; };
+		788F3343211C211A008EA08F /* RTCP2PEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 788F3341211C2112008EA08F /* RTCP2PEngine.framework */; };
+		788F3344211C211A008EA08F /* RTCP2PEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 788F3341211C2112008EA08F /* RTCP2PEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		917E0D15DFFE3A2B7A426F33 /* libPods-P2PDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B49163C74E32E9AF5AC010B /* libPods-P2PDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				788F3344211C211A008EA08F /* RTCP2PEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -113,6 +117,7 @@
 		637962901FAC0F9D0020566D /* ATStartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATStartViewController.m; sourceTree = "<group>"; };
 		63A4C2B21FC2E984001D2D58 /* ATNetWorkTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATNetWorkTool.h; sourceTree = "<group>"; };
 		63A4C2B31FC2E984001D2D58 /* ATNetWorkTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATNetWorkTool.m; sourceTree = "<group>"; };
+		788F3341211C2112008EA08F /* RTCP2PEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RTCP2PEngine.framework; sourceTree = "<group>"; };
 		D94899357E41F141A3DF3BE9 /* Pods-P2PDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-P2PDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-P2PDemo/Pods-P2PDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F4D7DAECCD60A3D25C265A48 /* Pods-P2PDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-P2PDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-P2PDemo/Pods-P2PDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,7 +127,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				788F3343211C211A008EA08F /* RTCP2PEngine.framework in Frameworks */,
 				917E0D15DFFE3A2B7A426F33 /* libPods-P2PDemo.a in Frameworks */,
+				788F3342211C2112008EA08F /* RTCP2PEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +194,7 @@
 		635444821FAABFF00074DB64 = {
 			isa = PBXGroup;
 			children = (
+				788F3341211C2112008EA08F /* RTCP2PEngine.framework */,
 				6354448D1FAABFF00074DB64 /* P2PDemo */,
 				635444A61FAABFF00074DB64 /* P2PDemoTests */,
 				635444B11FAABFF00074DB64 /* P2PDemoUITests */,
@@ -317,7 +325,6 @@
 				635444891FAABFF00074DB64 /* Resources */,
 				61003C69F0F2710DA08BF689 /* [CP] Copy Pods Resources */,
 				63746DFD1FAAC2BF005C7636 /* Embed Frameworks */,
-				F91F392FE789CBD097E45AD3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -483,24 +490,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F91F392FE789CBD097E45AD3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-P2PDemo/Pods-P2PDemo-frameworks.sh",
-				"${PODS_ROOT}/RTCP2PEngine/RTCP2PEngine/RTCP2PEngine.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RTCP2PEngine.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-P2PDemo/Pods-P2PDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -695,6 +684,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/P2PDemo",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/P2PDemo.pch";
 				INFOPLIST_FILE = P2PDemo/Info.plist;
@@ -749,6 +739,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/P2PDemo",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/P2PDemo.pch";
 				INFOPLIST_FILE = P2PDemo/Info.plist;
