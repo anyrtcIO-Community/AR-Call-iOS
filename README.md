@@ -14,7 +14,7 @@ Xcode 8以上</br>
 
 ### Cocoapods导入
 ```
-pod 'RTCP2PEngine', '~> 1.0.5'
+pod 'RTCP2PEngine', '~> 1.0.6'
 ```
 ### 手动导入
 
