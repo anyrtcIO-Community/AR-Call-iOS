@@ -20,6 +20,7 @@
 		6354449E1FAABFF00074DB64 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6354449D1FAABFF00074DB64 /* main.m */; };
 		635444A81FAABFF00074DB64 /* P2PDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 635444A71FAABFF00074DB64 /* P2PDemoTests.m */; };
 		635444B31FAABFF00074DB64 /* P2PDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 635444B21FAABFF00074DB64 /* P2PDemoUITests.m */; };
+		635AA3A2213CEB05002D3511 /* AppDelegate+JPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 635AA3A1213CEB05002D3511 /* AppDelegate+JPush.m */; };
 		636D37101FAC50CE00BD7FCA /* ATCallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 636D370F1FAC50CE00BD7FCA /* ATCallManager.m */; };
 		636D37131FAC604700BD7FCA /* ATVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636D37121FAC604700BD7FCA /* ATVideoViewController.m */; };
 		636D37161FAC605500BD7FCA /* ATAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 636D37151FAC605500BD7FCA /* ATAudioViewController.m */; };
@@ -92,6 +93,8 @@
 		635444AE1FAABFF00074DB64 /* P2PDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = P2PDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		635444B21FAABFF00074DB64 /* P2PDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = P2PDemoUITests.m; sourceTree = "<group>"; };
 		635444B41FAABFF00074DB64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		635AA3A0213CEB05002D3511 /* AppDelegate+JPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JPush.h"; sourceTree = "<group>"; };
+		635AA3A1213CEB05002D3511 /* AppDelegate+JPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+JPush.m"; sourceTree = "<group>"; };
 		636D370E1FAC50CE00BD7FCA /* ATCallManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATCallManager.h; sourceTree = "<group>"; };
 		636D370F1FAC50CE00BD7FCA /* ATCallManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATCallManager.m; sourceTree = "<group>"; };
 		636D37111FAC604700BD7FCA /* ATVideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATVideoViewController.h; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 			children = (
 				63283B501FC511C90037AF2F /* UIView+WZXLines.h */,
 				63283B511FC511CA0037AF2F /* UIView+WZXLines.m */,
+				635AA3A0213CEB05002D3511 /* AppDelegate+JPush.h */,
+				635AA3A1213CEB05002D3511 /* AppDelegate+JPush.m */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -525,6 +530,7 @@
 				6374A2611FB2D42400F04E71 /* ATHistoryViewController.m in Sources */,
 				63283B521FC511CA0037AF2F /* UIView+WZXLines.m in Sources */,
 				636D37161FAC605500BD7FCA /* ATAudioViewController.m in Sources */,
+				635AA3A2213CEB05002D3511 /* AppDelegate+JPush.m in Sources */,
 				634B3E921FAAFB940079716B /* ATMainViewController.m in Sources */,
 				635444901FAABFF00074DB64 /* AppDelegate.m in Sources */,
 			);

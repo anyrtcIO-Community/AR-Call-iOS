@@ -29,7 +29,7 @@ PODS:
   - JPush (3.0.2):
     - JCore (~> 1.1.1)
   - Masonry (1.1.0)
-  - RTCP2PEngine (1.0.6)
+  - RTCP2PEngine (1.0.7)
   - XHToast (1.4.0)
 
 DEPENDENCIES:
@@ -39,7 +39,7 @@ DEPENDENCIES:
   - IQKeyboardManager (~> 5.0.3)
   - JPush (= 3.0.2)
   - Masonry
-  - RTCP2PEngine (~> 1.0.6)
+  - RTCP2PEngine (~> 1.0.7)
   - XHToast (~> 1.4.0)
 
 SPEC REPOS:
@@ -62,9 +62,9 @@ SPEC CHECKSUMS:
   JCore: 9bd9c770c877c583d98b90a68792b8361974c231
   JPush: 01a693fafe51b93eafc2e368bbc7a7cc07e12ce4
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  RTCP2PEngine: 96b7b0c4b14e17824dfdf3757632b71925811151
+  RTCP2PEngine: cc71b4d8e85c225d0da52d8dcd2e4da764cc9728
   XHToast: 3b354766d56d9df8fef8e64387bbd25c90d71a86
 
-PODFILE CHECKSUM: 9062aa889b39e502ea501870ae5ea383a8f7906d
+PODFILE CHECKSUM: 7173a1ff38a2b84a2bd35dd3eddfb0443150d96c
 
 COCOAPODS: 1.5.0
