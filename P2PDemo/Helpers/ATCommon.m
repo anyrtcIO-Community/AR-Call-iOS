@@ -287,11 +287,12 @@
 + (NSString *)timeFormatted:(NSString *)totalSeconds
 {
     NSDate  *date = [NSDate dateWithTimeIntervalSince1970:[totalSeconds intValue]];
-    NSTimeZone *zone = [NSTimeZone systemTimeZone];
+    NSTimeZone *zone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
     NSInteger interval = [zone secondsFromGMTForDate: date];
     NSDate *localeDate = [date  dateByAddingTimeInterval: interval];
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"YYYY年MM月dd日"];
+    //yyyy-MM-dd a HH:mm:ss EEEE
+    [formatter setDateFormat:@"yyyy-MM-dd"];
     NSString * str = [NSString stringWithFormat:@"%@",localeDate];
     str = [formatter stringFromDate:localeDate];
     return str;

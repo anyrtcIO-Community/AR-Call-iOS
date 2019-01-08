@@ -43,6 +43,7 @@
     self.modeLabel.text = [NSString stringWithFormat:@"%@ - %@ ",callModeStr,historyModel.state];
     self.timeLabel.text = [NSString stringWithFormat:@"时长 %@",[ATCommon getMMSSFromSS:historyModel.timer]];
     
+    NSLog(@"%@---",historyModel.date);
     //通话日期
     self.dateLabel.text = [ATCommon timeFormatted:historyModel.date];
 }
