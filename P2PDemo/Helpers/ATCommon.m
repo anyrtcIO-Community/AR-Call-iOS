@@ -377,26 +377,26 @@
 
 + (NSString *)getErrorInfoWithCode:(int)code {
     switch (code) {
-        case RTCCall_OK: return @"通话结束";
+        case ARP2P_OK: return @"对方挂断通话";
             
-        case RTCCall_PEER_BUSY: return @"对方忙";
+        case ARP2P_PEER_BUSY: return @"对方忙";
             
-        case RTCCall_OFFLINE: return @"对方不在线";
+        case ARP2P_OFFLINE: return @"对方不在线";
         
-        case RTCCall_NOT_SELF: return @"不能呼叫自己";
+        case ARP2P_NOT_SELF: return @"不能呼叫自己";
         
-        case RTCCall_EXP_OFFLINE: return @"通话中对方意外掉线";
+        case ARP2P_EXP_OFFLINE: return @"通话中对方意外掉线";
         
-        case RTCCall_EXP_EXIT: return @"对方异常退出";
+        case ARP2P_EXP_EXIT: return @"对方异常退出";
 
-        case RTCCall_TIMEOUT: return @"呼叫超时";
+        case ARP2P_TIMEOUT: return @"呼叫超时";
 
-        case RTCCall_NOT_SURPPORT: return @"被呼叫方只支持Android";
+        case ARP2P_NOT_SURPPORT: return @"被呼叫方只支持Android";
         
         case 203: return @"开发者配置信息错误";
         
         default:  return @"未知错误";
-            break;
+        break;
     }
 }
 

@@ -61,24 +61,24 @@
             break;
         case 100:
             //视频通话
-            self.videoVc.callMode = RTP2P_CALL_Video;
+            self.videoVc.callMode = ARP2P_Call_Video;
             [self.navigationController pushViewController:self.videoVc animated:YES];
             break;
         case 101:
             //视频优先通话
-            self.videoVc.callMode = RTP2P_CALL_VideoPro;
+            self.videoVc.callMode = ARP2P_Call_VideoPro;
             [self.navigationController pushViewController:self.videoVc animated:YES];
             break;
         case 102:
             //视频监看
-            self.videoVc.callMode = RTP2P_CALL_VideoMon;
+            self.videoVc.callMode = ARP2P_Call_VideoMonitor;
             [self.navigationController pushViewController:self.videoVc animated:YES];
             break;
         case 103:
         {
             //音频通话
             ATAudioViewController *audioVc = [[self storyboard] instantiateViewControllerWithIdentifier:@"Audio"];
-            audioVc.callMode = RTP2P_CALL_Audio;
+            audioVc.callMode = ARP2P_Call_Audio;
             audioVc.peerId = self.peerIdTextField.text;
             audioVc.isCall = YES;
             [self.navigationController pushViewController:audioVc animated:YES];
@@ -88,10 +88,7 @@
         {
             //重新呼叫
             if (!self.isOn) {
-                RTCP2POption *option = [RTCP2POption defaultOption];
-                option.videoMode = AnyRTCVideoQuality_Medium2;
-                option.isFont = YES;
-                [[[ATCallManager sharedInstance] p2PKit] turnOn:self.userId];
+                [[ATCallManager.sharedInstance p2PKit] turnOnByToken:nil userId:self.userId];
             }
         }
         default:

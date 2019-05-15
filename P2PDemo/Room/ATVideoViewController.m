@@ -56,14 +56,14 @@
     
     if (self.isCall) {
         //呼叫方
-        if (self.callMode == RTP2P_CALL_VideoPro) {
+        if (self.callMode == ARP2P_Call_VideoPro) {
             [self itializationP2PKit];
         }
         [self.callView changeTimeMeterStart];
-        [self.callManager.p2PKit makeCall:self.peerId withCallModel:self.callMode withUserData:nil];
+        [self.callManager.p2PKit makeCall:self.peerId callModel:self.callMode userData:@""];
     } else {
         //接听方
-        if (self.callMode == RTP2P_CALL_VideoPro) {
+        if (self.callMode == ARP2P_Call_VideoPro) {
             //pro显示
             [self.callView changProVideoState:NO];
         }
@@ -73,7 +73,7 @@
     [self.view insertSubview:self.callView atIndex:99];
     [self.view insertSubview:self.localView atIndex:0];
     
-    if (self.callMode != RTP2P_CALL_VideoMon) {
+    if (self.callMode != ARP2P_Call_VideoMonitor) {
         [self.view addGestureRecognizer:self.toolTap];
         [self.renderView addGestureRecognizer:self.switchTap];
     }
@@ -93,16 +93,16 @@
 
 //设置其他视频显示窗口
 - (void)setRTCVideoRender{
-    if (self.callMode == RTP2P_CALL_VideoMon) {
+    if (self.callMode == ARP2P_Call_VideoMonitor) {
         //视频监听模式(被呼叫方为Android用户)
         [self.callView removeFromSuperview];
-        [self.callManager.p2PKit setRTCVideoRender:self.peerId andRender:self.localView];
+        [self.callManager.p2PKit setRemoteVideoRender:self.localView userId:self.peerId];
         self.switchAudioButton.hidden = YES;
         self.audioButton.hidden = YES;
         self.speakerButton.hidden = YES;
         self.cameraButton.hidden = YES;
     } else {
-        [self.callManager.p2PKit setRTCVideoRender:self.peerId andRender:self.renderView];
+        [self.callManager.p2PKit setRemoteVideoRender:self.renderView userId:self.peerId];
         [self toolViewDisplay];
     }
 }
@@ -110,7 +110,7 @@
 //优先显示
 - (void)setRTCVideoPro{
     self.callView.headImageView.hidden = YES;
-    [self.callManager.p2PKit setRTCVideoRender:self.peerId andRender:self.callView.proView];
+    [self.callManager.p2PKit setRemoteVideoRender:self.callView.proView userId:self.peerId];
 }
 
 //P2P接受
@@ -119,7 +119,7 @@
     [[ATCallManager sharedInstance] pauseMp3];
     self.historyModel.state = @"已接通话";
     [ATCommon basicAnimation:self.callView];
-    if (self.callMode == RTP2P_CALL_Video) {
+    if (self.callMode == ARP2P_Call_Video) {
         [self itializationP2PKit];
     }
 }
@@ -152,7 +152,7 @@
         case 104:
             //切换音频模式
             self.startDate = [ATCommon getSecondsSince1970];
-            self.historyModel.callMode = RTP2P_CALL_Audio;
+            self.historyModel.callMode = ARP2P_Call_Audio;
             if ([self.callManager.p2PKit onRTCSwithToAudioMode]) {
                 [self switchToAudio];
             } else {
@@ -175,6 +175,8 @@
     [self.infoLabel timeMeterStart:@"正在通话中..."];
     [self.renderView removeFromSuperview];
     [self.localView removeFromSuperview];
+    self.renderView = nil;
+    self.localView = nil;
     [self.switchAudioButton removeFromSuperview];
     [self.speakerButton setImage:[UIImage imageNamed:@"Button_speaker"] forState:UIControlStateNormal];
     [self.speakerButton setImage:[UIImage imageNamed:@"Button_speaker_click"] forState:UIControlStateSelected];
@@ -182,7 +184,7 @@
     self.cameraButton.hidden = YES;
     
     self.startDate = [ATCommon getSecondsSince1970];
-    self.historyModel.callMode = RTP2P_CALL_Audio;
+    self.historyModel.callMode = ARP2P_Call_Audio;
 }
 
 //工具显示
@@ -248,7 +250,7 @@
             switch (tag) {
                 case 100:
                     //接听
-                    if (weakSelf.callMode == RTP2P_CALL_VideoPro) {
+                    if (weakSelf.callMode == ARP2P_Call_Audio) {
                         [weakSelf setRTCVideoRender];
                     }
                     [weakSelf.callManager.p2PKit acceptCall:weakSelf.peerId];

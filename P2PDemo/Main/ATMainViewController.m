@@ -38,7 +38,7 @@
         self.codeTextField.hidden = YES;
         [self.userButton setTitle:self.userId forState:UIControlStateNormal];
         //P2P上线
-        [[[ATCallManager sharedInstance] p2PKit] turnOn:self.userButton.titleLabel.text];
+        [[ATCallManager.sharedInstance p2PKit] turnOnByToken:nil userId:self.userButton.titleLabel.text];
     } else {
         //登录
         self.userButton.hidden = YES;
@@ -131,7 +131,7 @@
         case 103:
             //重新上线
             if (!self.isOn) {
-                [[[ATCallManager sharedInstance] p2PKit] turnOn:self.userButton.titleLabel.text];
+                [[ATCallManager.sharedInstance p2PKit] turnOnByToken:nil userId:self.userButton.titleLabel.text];
             }
             break;
         default:
@@ -146,7 +146,7 @@
         self.codeTextField.hidden = YES;
         self.userButton.hidden = NO;
         [self.userButton setTitle:self.userId forState:UIControlStateNormal];
-        [[[ATCallManager sharedInstance] p2PKit] turnOn:self.userButton.titleLabel.text];
+        [[ATCallManager.sharedInstance p2PKit] turnOnByToken:nil userId:self.userButton.titleLabel.text];
         [[NSUserDefaults standardUserDefaults] setObject:self.userId forKey:User_PhoneNumber];
         [[NSUserDefaults standardUserDefaults]synchronize];
     }

@@ -14,7 +14,7 @@
 @property (nonatomic, copy) NSString *peerId;
 
 //呼叫模式
-@property (nonatomic, assign) RTP2PCallMode callMode;
+@property (nonatomic, assign) ARP2PCallModel callMode;
 
 //接听0 呼叫1
 @property (nonatomic, assign)BOOL isCall;

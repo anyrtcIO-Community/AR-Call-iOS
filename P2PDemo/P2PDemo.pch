@@ -9,22 +9,32 @@
 #ifndef P2PDemo_pch
 #define P2PDemo_pch
 
-#import <RTCP2PEngine/AnyRTCP2P.h>
-//公共类
+#import <UIKit/UIKit.h>
+
+#error - 请前往www.anyrtc.io申请开发者信息
+//MARK: - 配置开发者信息
+static NSString *developerID = @"XXXXXX";
+static NSString *token = @"XXXXXX";
+static NSString *key = @"XXXXXX";
+static NSString *appID = @"XXXXXX";
+//极光推送
+static NSString *appKey = @"60b1a6bd2abab50b901ab303";
+static NSString *channel = @"Publish channel";
+static BOOL isProduction = FALSE;
+
+//MARK: - ARP2PSDK && lib
+#import <RTCP2PEngine/ARP2PSDK.h>
+#import <FMDB.h>
+#import <IQKeyboardManager.h>
+
 #import "ATCommon.h"
 //计时器
 #import "ATLabel.h"
 //倒计时
 #import "ATCountdown.h"
-//提示
 #import "XHToast.h"
-//FMDB
-#import <FMDB.h>
 
-#import <IQKeyboardManager.h>
-//画线
 #import "UIView+WZXLines.h"
-
 #import "ATCallManager.h"
 //(呼叫、被叫)接听
 #import "ATCallView.h"
@@ -38,17 +48,18 @@
 #import "ATStartViewController.h"
 //网络请求
 #import "ATNetWorkTool.h"
-
 #import "AppDelegate.h"
-//弱指针
-#define WEAKSELF __weak typeof(self)weakSelf =self
 
-#pragma mark - 通话历史
+//通话历史
 #import "ATHistoryCell.h"
 #import "ATHistoryTool.h"
 #import "ATHistoryModel.h"
 
+//MARK: - 宏
+
 //用户验证
 #define User_PhoneNumber @"Users_PhoneNumber"
+//弱指针
+#define WEAKSELF __weak typeof(self)weakSelf = self
 
 #endif /* P2PDemo_pch */

@@ -29,7 +29,7 @@
     self.callManager = [ATCallManager sharedInstance];
     if (self.isCall) {
         [self.callView changeTimeMeterStart];
-        [self.callManager.p2PKit makeCall:self.peerId withCallModel:self.callMode withUserData:nil];
+        [self.callManager.p2PKit makeCall:self.peerId callModel:self.callMode userData:@""];
     }
     self.callView.peerLabel.text = self.peerId;
     self.callView.infoLabel.text = @"音频通话";

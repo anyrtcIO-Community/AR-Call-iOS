@@ -1,10 +1,5 @@
 # anyRTC-P2P-iOS
 
-## 更新日志
-
-2018年10月31日：</br>
-修复美颜相机情况下，本地视频添加子视图镜像的问题。</br>
-
 ## 简介
 anyRTC-P2P-iOS点对点呼叫，支持视频、语音、优先视频等多种呼叫模式，基于RTCP2PEngine SDK，适用于网络电话、活动、教育等多种呼叫场景。</br>
 
@@ -19,7 +14,7 @@ Xcode 8以上</br>
 
 ### Cocoapods导入
 ```
-pod 'RTCP2PEngine', '~> 1.0.6'
+pod 'RTCP2PEngine', '~> 3.0.0'
 ```
 ### 手动导入
 
@@ -61,18 +56,31 @@ pod 'RTCP2PEngine', '~> 1.0.6'
 
 ## 支持的CPU架构
 **iOS** armv7 、arm64。  支持bitcode
+
 ## ipv6
 苹果2016年6月新政策规定新上架app必须支持ipv6-only。该库已经适配
+
 ## Android版P2P点对点Demo
 [anyRTC-P2P-Android](https://github.com/AnyRTC/anyRTC-P2P-Android)
 
+## 更新日志
+
+* 2019年05月15日：</br>
+
+SDK更新3.0.0版本</br>
+
+* 2018年10月31日：</br>
+修复美颜相机情况下，本地视频添加子视图镜像的问题。</br>
+
 ## 技术支持
-anyRTC官方网址：https://www.anyrtc.io </br>
-QQ技术交流群：554714720 </br>
-联系电话:021-65650071-816 </br>
-Email:hi@dync.cc </br>
+* anyRTC官方网址：https://www.anyrtc.io </br>
+* QQ技术交流群：554714720 </br>
+* 联系电话:021-65650071-816 </br>
+* Email:hi@dync.cc </br>
+
 ## 关于直播
 本公司有一整套直播解决方案，特别针对移动端。本公司开发者平台[www.anyrtc.io](http://www.anyrtc.io)。除了基于RTMP协议的直播系统外，我公司还有基于WebRTC的时时交互直播系统、P2P呼叫系统、会议系统等。快捷集成SDK，便可让你的应用拥有时时通话功能。欢迎您的来电~
+
 ## License
 
 RTCP2PEngine is available under the MIT license. See the LICENSE file for more info.

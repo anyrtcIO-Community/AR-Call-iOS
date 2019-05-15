@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6305F33A223BAC710007FEAC /* RTCP2PEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6305F339223BAC710007FEAC /* RTCP2PEngine.framework */; };
+		6305F33C223BAC7A0007FEAC /* RTCP2PEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6305F339223BAC710007FEAC /* RTCP2PEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		63283B4C1FC511BB0037AF2F /* ATCountdown.m in Sources */ = {isa = PBXBuildFile; fileRef = 63283B451FC511BA0037AF2F /* ATCountdown.m */; };
 		63283B4D1FC511BB0037AF2F /* ATCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63283B461FC511BB0037AF2F /* ATCallView.m */; };
 		63283B4E1FC511BB0037AF2F /* ATLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 63283B4A1FC511BB0037AF2F /* ATLabel.m */; };
@@ -58,6 +60,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				6305F33C223BAC7A0007FEAC /* RTCP2PEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		0B49163C74E32E9AF5AC010B /* libPods-P2PDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-P2PDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6305F339223BAC710007FEAC /* RTCP2PEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RTCP2PEngine.framework; sourceTree = "<group>"; };
 		63283B451FC511BA0037AF2F /* ATCountdown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCountdown.m; sourceTree = "<group>"; };
 		63283B461FC511BB0037AF2F /* ATCallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATCallView.m; sourceTree = "<group>"; };
 		63283B471FC511BB0037AF2F /* ATCountdown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATCountdown.h; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				917E0D15DFFE3A2B7A426F33 /* libPods-P2PDemo.a in Frameworks */,
+				6305F33A223BAC710007FEAC /* RTCP2PEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				63746DF71FAAC0F3005C7636 /* P2PDemo.entitlements */,
+				6305F339223BAC710007FEAC /* RTCP2PEngine.framework */,
 				63746DF61FAAC0B0005C7636 /* Helpers */,
 				63746DF51FAAC0AE005C7636 /* Main */,
 				63746DF41FAAC0AB005C7636 /* Room */,
@@ -322,7 +328,6 @@
 				635444891FAABFF00074DB64 /* Resources */,
 				61003C69F0F2710DA08BF689 /* [CP] Copy Pods Resources */,
 				63746DFD1FAAC2BF005C7636 /* Embed Frameworks */,
-				7684695ECC7B203197DCEA2B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -470,24 +475,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-P2PDemo/Pods-P2PDemo-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7684695ECC7B203197DCEA2B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-P2PDemo/Pods-P2PDemo-frameworks.sh",
-				"${PODS_ROOT}/RTCP2PEngine/RTCP2PEngine/RTCP2PEngine.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RTCP2PEngine.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-P2PDemo/Pods-P2PDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F89FB0CABDE945F469A9FE1D /* [CP] Check Pods Manifest.lock */ = {

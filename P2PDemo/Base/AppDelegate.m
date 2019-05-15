@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <RTCP2PEngine/AnyRTCP2PEngine.h>
 #import <Bugly/Bugly.h>
 #import "AppDelegate+JPush.h"
 
@@ -20,30 +19,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-#warning - 前往https://www.anyrtc.io/home创建应用获取相关ID
     //配置信息
-    [AnyRTCP2PEngine initEngineWithAnyRTCInfo:developerID andAppId:appID andKey:key andToke:token];
-    //配置私有云，默认无需配置
-    //[AnyRTCP2PEngine configServerForPriCloud:@"XXX" andPort:nil];
-    
-    [NSThread sleepForTimeInterval:0.5];
-    // 配置IQKeyboardManager
-    [self configurationIQKeyboard];
+    [ARP2PEngine initEngine:appID token:token];
     //极光推送
     [self registerPush:launchOptions];
-    
-    [Bugly startWithAppId:@"4ebcef40f6"];
     return YES;
 }
-
-- (void)configurationIQKeyboard
-{
-    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
-    manager.shouldResignOnTouchOutside = YES;
-    manager.shouldToolbarUsesTextFieldTintColor = YES;
-    manager.enableAutoToolbar = NO;
-}
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

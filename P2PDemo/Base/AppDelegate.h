@@ -8,15 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-static NSString *developerID = @"XXX";
-static NSString *token = @"XXX";
-static NSString *key = @"XXX";
-static NSString *appID = @"XXX";
-
-static NSString *appKey = @"XXX";
-static NSString *channel = @"Publish channel";
-static BOOL isProduction = FALSE;
-
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

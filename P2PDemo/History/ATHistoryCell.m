@@ -19,16 +19,16 @@
     self.phoneLabel.text = historyModel.phoneStr;
     NSString *callModeStr;
     switch (historyModel.callMode) {
-        case RTP2P_CALL_Video:
+        case ARP2P_Call_Video:
             callModeStr = @"视频通话";
             break;
-        case RTP2P_CALL_VideoPro:
+        case ARP2P_Call_VideoPro:
             callModeStr = @"视频优先通话";
             break;
-        case RTP2P_CALL_Audio:
+        case ARP2P_Call_Audio:
             callModeStr = @"音频通话";
             break;
-        case RTP2P_CALL_VideoMon:
+        case ARP2P_Call_VideoMonitor:
             callModeStr = @"视频监看";
             break;
         default:

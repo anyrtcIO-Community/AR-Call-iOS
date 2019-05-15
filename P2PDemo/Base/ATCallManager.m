@@ -8,7 +8,7 @@
 
 #import "ATCallManager.h"
 
-@interface ATCallManager()<RTCP2PKitDelegate>
+@interface ATCallManager()<ARP2PKitDelegate>
 
 @end
 
@@ -28,10 +28,13 @@ static ATCallManager *manager = nil;
 {
     if (self = [super init]) {
         //配置信息
-        RTCP2POption *option = [RTCP2POption defaultOption];
-        option.videoMode = AnyRTCVideoQuality_Medium2;
-        option.isFont = YES;
-        self.p2PKit = [[RTCP2PKit alloc] initWithDelegate:self andOption:option];
+        ARP2POption *option = [ARP2POption defaultOption];
+        ARVideoConfig *config = [[ARVideoConfig alloc] init];
+        config.videoProfile = ARVideoProfile360x640;
+        config.isFont = YES;
+        option.videoConfig = config;
+        
+        self.p2PKit = [[ARP2PKit alloc] initWithDelegate:self option:option];
     }
     return self;
 }
@@ -56,9 +59,9 @@ static ATCallManager *manager = nil;
     }
 }
 
-#pragma mark - RTCP2PKitDelegate
+#pragma mark - ARP2PKitDelegate
 
-- (void)onConnected{
+- (void)onRTCConnected {
     //服务连接成功
     UIViewController *currentVc = [ATCommon topViewController];
     if ([currentVc isKindOfClass:[ATMainViewController class]]){
@@ -74,7 +77,7 @@ static ATCallManager *manager = nil;
     }
 }
 
-- (void)onDisconnect:(int)nCode{
+- (void)onRTCDisconnect:(ARP2PCode)code {
     //服务断开    
     UIViewController *currentVc = [ATCommon topViewController];
     if ([currentVc isKindOfClass:[ATMainViewController class]]){
@@ -97,35 +100,35 @@ static ATCallManager *manager = nil;
         });
     }
     
-    if (nCode == 100) {
+    if (code == ARP2P_NET_ERR) {
         [XHToast showCenterWithText:@"网络异常"];
         return;
     }
-    [XHToast showCenterWithText:[ATCommon getErrorInfoWithCode:nCode]];
+    [XHToast showCenterWithText:[ATCommon getErrorInfoWithCode:code]];
 }
 
-- (void)onRTCMakeCall:(NSString *)strPeerUserId withCallModel:(RTP2PCallMode)eCallMode withUserData:(NSString*)strPeerUserData{
+- (void)onRTCMakeCall:(NSString *)userId callModel:(ARP2PCallModel)callMode userData:(NSString *)userData {
     [[ATCallManager sharedInstance] playMp3];
     //收到呼叫的回调
     UIViewController *currentVc = [ATCommon topViewController];
-    if (eCallMode == RTP2P_CALL_Audio) {
+    if (callMode == ARP2P_Call_Audio) {
         //音频
         ATAudioViewController *audioVc = [[currentVc storyboard] instantiateViewControllerWithIdentifier:@"Audio"];
-        audioVc.callMode = eCallMode;
-        audioVc.peerId = strPeerUserId;
+        audioVc.callMode = callMode;
+        audioVc.peerId = userId;
         audioVc.isCall = NO;
         [currentVc.navigationController pushViewController:audioVc animated:YES];
     } else {
         //视频
         ATVideoViewController *videoVc = [[currentVc storyboard] instantiateViewControllerWithIdentifier:@"Video"];
-        videoVc.callMode = eCallMode;
-        videoVc.peerId = strPeerUserId;
+        videoVc.callMode = callMode;
+        videoVc.peerId = userId;
         videoVc.isCall = NO;
         [currentVc.navigationController pushViewController:videoVc animated:YES];
     }
 }
 
-- (void)onRTCAcceptCall:(NSString *)strPeerUserId{
+- (void)onRTCAcceptCall:(NSString *)userId {
     //收到对方同意的回调
     UIViewController *currentVc = [ATCommon topViewController];
     if ([currentVc isKindOfClass:[ATVideoViewController class]]) {
@@ -137,14 +140,14 @@ static ATCallManager *manager = nil;
     }
 }
 
-- (void)onRTCRejectCall:(NSString *)strPeerUserId withCode:(int)nCode{
-    [XHToast showCenterWithText:[ATCommon getErrorInfoWithCode:nCode]];
+- (void)onRTCRejectCall:(NSString *)userId code:(ARP2PCode)code {
+    [XHToast showCenterWithText:[ATCommon getErrorInfoWithCode:code]];
     //收到对方拒绝的回调
     UIViewController *currentVc = [ATCommon topViewController];
     if ([currentVc isKindOfClass:[ATVideoViewController class]]) {
         ATVideoViewController *videoVc = (ATVideoViewController *)currentVc;
         videoVc.historyModel.state = @"拒接通话";
-        if (nCode == 806) {
+        if (code == 806) {
             videoVc.historyModel.state = @"通话无效";
         }
     } else if ([currentVc isKindOfClass:[ATAudioViewController class]]){
@@ -154,21 +157,21 @@ static ATCallManager *manager = nil;
     [currentVc.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)onRTCEndCall:(NSString *)strPeerUserId withCode:(int)nCode{
-    [XHToast showCenterWithText:[ATCommon getErrorInfoWithCode:nCode]];
+- (void)onRTCEndCall:(NSString *)userId code:(ARP2PCode)code {
+    [XHToast showCenterWithText:[ATCommon getErrorInfoWithCode:code]];
     //收到对方挂断或者呼叫异常的回调
     UIViewController *currentVc = [ATCommon topViewController];
     [self.p2PKit close];
     [currentVc.navigationController popViewControllerAnimated:YES];
 }
 
-- (void)onRTCOpenVideoRender:(NSString*)strPeerUserId{
+- (void)onRTCOpenRemoteVideoRender:(NSString *)userId {
     //收到对方视频视频即将显示的回调
     UIViewController *currentVc = [ATCommon topViewController];
     if ([currentVc isKindOfClass:[ATVideoViewController class]]) {
         ATVideoViewController *videoVc = (ATVideoViewController *)currentVc;
         
-        if (videoVc.callMode == RTP2P_CALL_VideoPro && !videoVc.isCall) {
+        if (videoVc.callMode == ARP2P_Call_VideoPro && !videoVc.isCall) {
             //优先显示且是被呼叫方
             [videoVc setRTCVideoPro];
             [videoVc.callView changProVideoState:YES];
@@ -178,23 +181,23 @@ static ATCallManager *manager = nil;
     }
 }
 
-- (void)onRTCCloseVideoRender:(NSString*)strPeerUserId{
+- (void)onRTCCloseRemoteVideoRender:(NSString *)userId {
     //收到对方视频离开的回调
     
 }
 
-//消息回调
-- (void)onRTCUserMessage:(NSString *)strPeerUserId withMessage:(NSString *)strMessage {
-    NSLog(@"--%@ --%@ --",strPeerUserId,strMessage);
-}
-
-//转到音频模式
 - (void)onRTCSwithToAudioMode {
+    //切换到音频模式
     UIViewController *currentVc = [ATCommon topViewController];
     if ([currentVc isKindOfClass:[ATVideoViewController class]]){
         ATVideoViewController *videoVc =(ATVideoViewController *)currentVc;
         [videoVc switchToAudio];
     }
+}
+
+- (void)onRTCUserMessage:(NSString *)userId message:(NSString *)content {
+    //收到消息回调
+    
 }
 
 @end

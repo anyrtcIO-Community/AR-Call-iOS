@@ -53,7 +53,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     self.index ++;
     ATHistoryModel *model = self.dataArr[indexPath.row];
-    if (model.callMode != RTP2P_CALL_Audio) {
+    if (model.callMode != ARP2P_Call_Audio) {
         //视频
         ATVideoViewController *videoVc = [[self storyboard] instantiateViewControllerWithIdentifier:@"Video"];
         videoVc.isCall = YES;
@@ -63,7 +63,7 @@
     } else {
         //音频
         ATAudioViewController *audioVc = [[self storyboard] instantiateViewControllerWithIdentifier:@"Audio"];
-        audioVc.callMode = RTP2P_CALL_Audio;
+        audioVc.callMode = ARP2P_Call_Audio;
         audioVc.peerId = model.phoneStr;
         audioVc.isCall = YES;
         [self.navigationController pushViewController:audioVc animated:YES];

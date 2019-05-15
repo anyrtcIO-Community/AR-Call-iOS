@@ -11,9 +11,9 @@
 
 @interface ATCallManager : NSObject<AVAudioPlayerDelegate>
 
-@property (nonatomic, strong)RTCP2PKit *p2PKit;
+@property (nonatomic, strong) ARP2PKit *p2PKit;
 //呼叫模式
-@property (nonatomic, assign) RTP2PCallMode callMode;
+@property (nonatomic, assign) ARP2PCallModel callMode;
 
 @property (nonatomic, copy) NSString *peerId;
 
