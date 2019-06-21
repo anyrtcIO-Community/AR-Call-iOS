@@ -2,8 +2,8 @@
 //  main.m
 //  P2PDemo
 //
-//  Created by jh on 2017/11/2.
-//  Copyright © 2017年 jh. All rights reserved.
+//  Created by 余生丶 on 2019/5/30.
+//  Copyright © 2019 anyRTC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

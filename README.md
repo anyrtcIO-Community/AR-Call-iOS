@@ -1,7 +1,7 @@
 # anyRTC-P2P-iOS
 
 ## 简介
-anyRTC-P2P-iOS点对点呼叫，支持视频、语音、优先视频等多种呼叫模式，基于RTCP2PEngine SDK，适用于网络电话、活动、教育等多种呼叫场景。</br>
+anyRTC-P2P-iOS点对点呼叫，支持视频、语音、优先视频等多种呼叫模式，基于RTCallEngine SDK，适用于网络电话、活动、教育等多种呼叫场景。</br>
 
 ## 安装
 ### 1、编译环境
@@ -14,16 +14,16 @@ Xcode 8以上</br>
 
 ### Cocoapods导入
 ```
-pod 'RTCP2PEngine', '~> 3.0.0'
+pod 'RTCallEngine', '3.0.0'
 ```
 ### 手动导入
 
 1. 下载Demo，或者前往[anyRTC官网](https://www.anyrtc.io/resoure)下载SDK</br>
 ![list_directory](/image/list_directory.png)
 
-2. 在Xcode中选择“Add files to 'Your project name'...”，将RTCP2PEngine.framework添加到你的工程目录中</br>
+2. 在Xcode中选择“Add files to 'Your project name'...”，将RTCallEngine.framework添加到你的工程目录中</br>
 
-3.  打开General->Embedded Binaries中添加RTCP2PEngine.framework</br>
+3.  打开General->Embedded Binaries中添加RTCallEngine.framework</br>
 
 
 ## 如何使用？
@@ -43,9 +43,6 @@ pod 'RTCP2PEngine', '~> 3.0.0'
 
 ### 资源中心
 [更多详细方法使用，请查看API文档](https://www.anyrtc.io/resoure)
-
-## 项目展示
-![P2P](/image/P2P.gif)
 
 ## 扫描二维码下载demo
 ![P2P_scan@3x](/image/P2P_scan@3x.png)
@@ -83,5 +80,5 @@ SDK更新3.0.0版本</br>
 
 ## License
 
-RTCP2PEngine is available under the MIT license. See the LICENSE file for more info.
+RTCallEngine is available under the MIT license. See the LICENSE file for more info.
 
