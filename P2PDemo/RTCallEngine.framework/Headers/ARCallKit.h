@@ -45,21 +45,14 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param token 令牌:客户端向自己服务申请获得，参考企业级安全指南
  @param userId 用户Id，确保平台唯一，不能为空
+ @param userData 用户信息自定义信息
  */
-- (void)turnOnByToken:(NSString* _Nullable)token userId:(NSString *)userId;
+- (void)turnOnByToken:(NSString* _Nullable)token userId:(NSString *)userId userData:(NSString*)userData;
 
 /**
  下线
  */
 - (void)turnOff;
-
-
-/**
- 挂起:挂起后将不再接收呼叫
-
- @param enable YES/NO:挂起与否
- */
-- (void)setAvalible:(BOOL)enable;
 
 #pragma mark - 本地和远程视频预览
 /**
@@ -67,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param render 本地视频窗口
  @param option 配置项
- 说明：必须放到 makeCall方法之后调用
+ 说明：必须放到 makeCall方法之后调用,或者收到onRTCMakeCall回调之后调用
  */
 - (void)setLocalVideoCapturer:(UIView *)render option:(ARCallOption*)option;
 

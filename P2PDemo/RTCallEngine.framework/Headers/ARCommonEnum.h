@@ -118,5 +118,11 @@ typedef NS_ENUM(NSInteger, ARCameraFilterMode){
     //高斯模糊
     ARCameraFilterGaussianBlur
 };
-
+// 视频方向
+typedef NS_ENUM(NSInteger,ARVideoRotation){
+    ARVideoRoation_0 = 0,
+    ARVideoRoation_90 = 90,
+    ARVideoRoation_180 = 180,
+    ARVideoRoation_270 = 270,
+};
 #endif /* ARCommonEnum_h */

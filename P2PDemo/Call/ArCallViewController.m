@@ -25,7 +25,7 @@
     //上线
     ArCallManager *manager = ArCallManager.shareInstance;
     manager.callKit.callDelegate = self;
-    [manager.callKit turnOnByToken:@"" userId:ArUserManager.getUserInfo.userid];
+    [manager.callKit turnOnByToken:@"" userId:ArUserManager.getUserInfo.userid userData:nil];
     
     self.numberLabel.text = ArUserManager.getUserInfo.userid;
     

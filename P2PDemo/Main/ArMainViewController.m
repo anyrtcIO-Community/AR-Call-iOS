@@ -27,6 +27,7 @@
     if (self.numberTextField.text.length != 0) {
         ArUserInfo *userInfo = [[ArUserInfo alloc] initWithName:@"" userId:self.numberTextField.text];
         [ArUserManager saveUserInfo:userInfo];
+        ArCallManager.shareInstance.userId = self.numberTextField.text;
         return YES;
     }
     [SVProgressHUD showErrorWithStatus:@"手机号不能为空"];

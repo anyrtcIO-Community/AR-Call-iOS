@@ -15,6 +15,8 @@ static ArCallManager *callManager = nil;
 @property (nonatomic, strong) ARCallOption *option;
 @property (nonatomic, strong) NSMutableArray *logArr;
 
+@property (nonatomic, strong) ArLogView *logView;
+
 @end
 
 @implementation ArCallManager
@@ -96,7 +98,11 @@ static ArCallManager *callManager = nil;
     ArCallbackLog;
 }
 
-- (void)onRTCMakeCall:(NSString *)meetId userId:(NSString *)userId userData:(NSString *)userData callModel:(ARCallMode)callMode extend:(NSString*)extend {
+- (void)onRTCJoinRoomOk:(NSString*)roomId {
+    //加入房间成功
+}
+
+- (void)onRTCMakeCall:(NSString *)userId userData:(NSString *)userData callModel:(ARCallMode)callMode extend:(NSString*)extend {
     //收到呼叫的回调
     ArCallbackLog;
     [self callWithNumber:userId mode:callMode callStatus:ArCallStatus_Accept makeCall:NO];
@@ -134,6 +140,7 @@ static ArCallManager *callManager = nil;
     if (code == ARCall_TIMEOUT) {
         [ArCallCommon showAlertMessage:@"呼叫超时，请重新呼叫..."];
     } else {
+        [self.logView removeFromSuperview];
         [ArCallCommon showAlertMessage:@"对方挂断了通话"];
     }
     [self removeCallView];
@@ -275,10 +282,10 @@ static ArCallManager *callManager = nil;
         case 58:
             //日志
         {
-            ArLogView *logView = [[ArLogView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
-            [logView refreshLogText:self.logArr];
+            self.logView = [[ArLogView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+            [self.logView refreshLogText:self.logArr];
             UIWindow *window = UIApplication.sharedApplication.delegate.window;
-            [window addSubview:logView];
+            [window addSubview:self.logView];
         }
             break;
         default:

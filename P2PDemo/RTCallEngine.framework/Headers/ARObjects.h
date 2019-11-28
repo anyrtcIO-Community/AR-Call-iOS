@@ -27,6 +27,7 @@ typedef NS_ENUM(NSInteger,ARCaptureType) {
 @property (nonatomic, copy) NSString *userData;
 @property (nonatomic, assign) BOOL audioEnable;
 @property (nonatomic, assign) BOOL videoEnable;
+
 @end
 
 @interface ARObjects : NSObject

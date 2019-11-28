@@ -30,13 +30,20 @@
 /**
  收到呼叫的回调
  
- @param meetId 会议Id,当AR_Call_Meet_Invite类型的时候，该参数为空
  @param userId 呼叫方的Id
  @param userData 呼叫方的自定义信息
  @param callMode 呼叫类型
  @param extend 扩展信息，用户自定义,呼叫群组的时候带的
  */
-- (void)onRTCMakeCall:(NSString *)meetId userId:(NSString *)userId userData:(NSString *)userData callModel:(ARCallMode)callMode extend:(NSString*)extend;
+- (void)onRTCMakeCall:(NSString *)userId userData:(NSString *)userData callModel:(ARCallMode)callMode extend:(NSString*)extend;
+
+
+/**
+ 加入房间成功（只有打开VIP或呼叫类型是AR_Call_Meet_Invite的时候才有回调）
+
+ @param roomId 房间号
+ */
+- (void)onRTCJoinRoomOk:(NSString*)roomId;
 
 /**
  收到对方同意的回调

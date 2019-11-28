@@ -48,11 +48,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (nonnull ARGroupOption *)defaultOption;
 
 /**
- 主叫用户的个人信息
- */
-@property (nonatomic, strong)NSString *userData;
-
-/**
  呼叫用户Id的数组
  */
 @property (nonatomic, strong) NSArray *userArray;
@@ -78,11 +73,6 @@ NS_ASSUME_NONNULL_BEGIN
  呼叫类型：默认AR_Call_Video，可选 AR_Call_VideoPro,AR_Call_Audio,AR_Call_VideoMonitor
  */
 @property (nonatomic, assign) ARCallMode callMode;
-
-/**
- 主叫用户的个人信息
- */
-@property (nonatomic, strong)NSString *userData;
 
 @end
 
@@ -131,13 +121,6 @@ NS_ASSUME_NONNULL_BEGIN
  呼叫类型：默认AR_Call_Cti_Video，可选 AR_Call_Cti_Audio
  */
 @property (nonatomic, assign) ARCallMode callMode;
-
-/**
- 主叫用户的个人信息
- */
-@property (nonatomic, strong)NSString *userData;
-
-
 
 /**
  等级：0~20: 0等级最大，值越大，等级越小
