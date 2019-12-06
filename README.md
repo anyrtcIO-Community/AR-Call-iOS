@@ -1,7 +1,7 @@
-# anyRTC-P2P-iOS
+# anyRTC-Call-iOS
 
 ## 简介
-anyRTC-P2P-iOS点对点呼叫，支持视频、语音、优先视频等多种呼叫模式，基于RTCallEngine SDK，适用于网络电话、活动、教育等多种呼叫场景。</br>
+anyRTC-Call-iOS呼叫，支持视频、语音、优先视频等多种呼叫模式，基于RTCallEngine SDK，适用于网络电话、活动、教育等多种呼叫场景。</br>
 
 ## 安装
 ### 1、编译环境
@@ -58,7 +58,7 @@ pod 'RTCallEngine', '3.0.0'
 苹果2016年6月新政策规定新上架app必须支持ipv6-only。该库已经适配
 
 ## Android版P2P点对点Demo
-[anyRTC-P2P-Android](https://github.com/AnyRTC/anyRTC-P2P-Android)
+[anyRTC-P2P-Android](https://github.com/anyRTC/AR-Call-Android)
 
 ## 更新日志
 
