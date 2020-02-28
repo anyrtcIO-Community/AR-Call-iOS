@@ -22,9 +22,9 @@ typedef NS_ENUM(NSInteger,ArCallStatus){
     ArCallStatus_Audio = 4,  //音频呼叫成功
 };
 
-//MARK: - 配置开发者信息
-static NSString *token = @"XXXXXX";
-static NSString *appID = @"XXXXXX";
+#error - 请前往www.anyrtc.io申请开发者信息
+static NSString *token = @"XXX";
+static NSString *appID = @"XXX";
 
 //极光推送
 static NSString *appKey = @"60b1a6bd2abab50b901ab303";
@@ -38,6 +38,7 @@ static BOOL isProduction = FALSE;
 #import <MJExtension.h>
 #import "UIAlertController+Blocks.h"
 #import "UIButton+ImageTitleSpacing.h"
+#import "UIViewController+PresentModel.h"
 
 #import "ArUserManager.h"
 #import "ArCallManager.h"

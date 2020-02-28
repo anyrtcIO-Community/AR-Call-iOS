@@ -21,6 +21,7 @@
 		63112EE1229F684A00D4671C /* ArCallManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 63112ED8229F684A00D4671C /* ArCallManager.m */; };
 		63112EE2229F684A00D4671C /* ArCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63112EDA229F684A00D4671C /* ArCallViewController.m */; };
 		63112EE4229F685E00D4671C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63112EE3229F685E00D4671C /* Main.storyboard */; };
+		637165212407721C001B8C2E /* UIViewController+PresentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 637165202407721C001B8C2E /* UIViewController+PresentModel.m */; };
 		6383BF0D233B39E900ABC2F8 /* WMDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6383BF0B233B39E900ABC2F8 /* WMDragView.m */; };
 		63AEF99F22A75B0900547E8D /* ArCallCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AEF99D22A75B0900547E8D /* ArCallCommon.m */; };
 		63AEF9A322A76EAB00547E8D /* ArContactCallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AEF9A122A76EAB00547E8D /* ArContactCallView.m */; };
@@ -89,6 +90,8 @@
 		63112EDB229F684A00D4671C /* ArCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArCallViewController.h; sourceTree = "<group>"; };
 		63112EE3229F685E00D4671C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		63112EE5229F68CF00D4671C /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6371651F2407721B001B8C2E /* UIViewController+PresentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PresentModel.h"; sourceTree = "<group>"; };
+		637165202407721C001B8C2E /* UIViewController+PresentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PresentModel.m"; sourceTree = "<group>"; };
 		6383BF0B233B39E900ABC2F8 /* WMDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDragView.m; sourceTree = "<group>"; };
 		6383BF0C233B39E900ABC2F8 /* WMDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDragView.h; sourceTree = "<group>"; };
 		63AEF99D22A75B0900547E8D /* ArCallCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArCallCommon.m; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 		63AEF9AB22A79B5F00547E8D /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				6371651F2407721B001B8C2E /* UIViewController+PresentModel.h */,
+				637165202407721C001B8C2E /* UIViewController+PresentModel.m */,
 				63112ED6229F684A00D4671C /* UIAlertController+Blocks.h */,
 				63112ED3229F684A00D4671C /* UIAlertController+Blocks.m */,
 				63AEF9A822A76F7C00547E8D /* UIButton+ImageTitleSpacing.h */,
@@ -461,6 +466,7 @@
 			files = (
 				63AEF9AA22A76F7C00547E8D /* UIButton+ImageTitleSpacing.m in Sources */,
 				63AEF9A722A76ED600547E8D /* ArTimeLable.m in Sources */,
+				637165212407721C001B8C2E /* UIViewController+PresentModel.m in Sources */,
 				63112EDD229F684A00D4671C /* AppDelegate.m in Sources */,
 				63AEF99F22A75B0900547E8D /* ArCallCommon.m in Sources */,
 				63AEF9A322A76EAB00547E8D /* ArContactCallView.m in Sources */,
@@ -625,35 +631,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = 3YB54BC6QT;
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/P2PDemo",
-				);
-				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
-				INFOPLIST_FILE = P2PDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dync.P2PDemo;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = dync_dis;
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		63112EC2229F67AA00D4671C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4553A44CAEC91F7E9691BC3E /* Pods-P2PDemo.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
 				ENABLE_BITCODE = NO;
@@ -670,7 +648,35 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.P2PDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = dync_dis;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		63112EC2229F67AA00D4671C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4553A44CAEC91F7E9691BC3E /* Pods-P2PDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5543CP4MRT;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/P2PDemo",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/PrefixHeader.pch";
+				INFOPLIST_FILE = P2PDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dync.P2PDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

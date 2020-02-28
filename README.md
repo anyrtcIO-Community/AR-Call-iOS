@@ -14,11 +14,11 @@ Xcode 8以上</br>
 
 ### Cocoapods导入
 ```
-pod 'RTCallEngine', '3.0.0'
+pod 'RTCallEngine', '3.0.2'
 ```
 ### 手动导入
 
-1. 下载Demo，或者前往[anyRTC官网](https://www.anyrtc.io/resoure)下载SDK</br>
+1. 下载Demo，或者前往[anyRTC官网](https://www.anyrtc.io)下载SDK</br>
 ![list_directory](/image/list_directory.png)
 
 2. 在Xcode中选择“Add files to 'Your project name'...”，将RTCallEngine.framework添加到你的工程目录中</br>
@@ -42,7 +42,7 @@ pod 'RTCallEngine', '3.0.0'
 3、选择呼叫模式开始呼叫，呼叫接通开始会话。</br>
 
 ### 资源中心
-[更多详细方法使用，请查看API文档](https://www.anyrtc.io/resoure)
+[更多详细方法使用，请查看API文档](https://docs.anyrtc.io/v1/CALL/)
 
 ## 扫描二维码下载demo
 ![P2P_scan@3x](/image/P2P_scan@3x.png)
